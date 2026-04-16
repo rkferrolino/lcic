@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500&display=swap');
+
+/* ✅ Set default font globally */
+body, html {
+  font-family: "Noto Sans", sans-serif;
+}
+
+@keyframes scrollline {
+  0%   { transform: scaleY(0); opacity: .25; }
+  60%  { transform: scaleY(1); opacity: 1; }
+  100% { transform: scaleY(1) translateY(8px); opacity: 0; }
+}
+@layer utilities {
+  .slick-gap-4 .slick-slide { margin: 0 0.5rem; } 
+  .slick-gap-4 .slick-list  { margin: 0 -0.5rem; }
+  .slick-gap-6 .slick-slide { margin: 0 18px; } 
+  .slick-gap-6 .slick-list  { margin: 0 -18px; }
+}
+.topics__item {
+  margin: 0 3px;
+}
+.group-nav.active {
+  background-color: #0055A6; /* Keep blue background */
+}
+
+.group-nav.active .dropdown {
+  display: flex !important; /* Keep dropdown visible */
+}
+
+.group-nav.active svg {
+  transform: rotate(180deg); /* Arrow points down */
+}
+
+.js-nav-toggle.open {
+  color: #FFFFFF !important;
+}

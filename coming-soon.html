@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming Soon | LCIC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+</head>
+
+<body class="bg-gradient-to-b from-sky-100 to-white flex items-center justify-center min-h-screen text-gray-800">
+  <div class="text-center px-6">
+    <!-- Logo or Icon -->
+    <div class="flex justify-center mb-6">
+      <img src="assets/img/logo-blue.webp" alt="LCIC Logo" class="w-auto" />
+    </div>
+
+    <!-- Heading -->
+    <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">Coming Soon</h1>
+    <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+      Our website is getting ready for launch!
+      Stay tuned for exciting updates from <span class="font-semibold text-sky-700">LCIC</span>.
+    </p>
+    <!-- Subscribe Form -->
+    <div class="mt-10 max-w-md mx-auto">
+      <form class="flex flex-col sm:flex-row items-center gap-3">
+        <input type="email" placeholder="Enter your email"
+          class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" />
+        <button type="submit"
+          class="px-6 py-3 bg-sky-600 text-white font-semibold rounded-lg hover:bg-sky-700 transition w-full sm:w-auto">
+          Notify Me
+        </button>
+      </form>
+      <p class="text-sm text-gray-500 mt-3">We’ll notify you once the page goes live.</p>
+    </div>
+
+    <!-- Social Links -->
+    <div class="mt-10 flex justify-center space-x-6">
+      <a href="#" class="text-gray-500 hover:text-sky-600">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-6 w-6" viewBox="0 0 24 24">
+          <path
+            d="M24 4.557a9.835 9.835 0 0 1-2.828.775A4.933 4.933 0 0 0 23.337 3a9.864 9.864 0 0 1-3.127 1.195A4.924 4.924 0 0 0 16.616 3c-2.733 0-4.944 2.224-4.944 4.963 0 .39.045.77.127 1.135C7.728 8.91 4.1 6.88 1.671 3.867a4.978 4.978 0 0 0-.666 2.49 4.962 4.962 0 0 0 2.19 4.138 4.904 4.904 0 0 1-2.238-.619v.06c0 2.438 1.707 4.47 3.977 4.931a4.94 4.94 0 0 1-2.229.086 4.939 4.939 0 0 0 4.604 3.43A9.876 9.876 0 0 1 0 19.539a13.945 13.945 0 0 0 7.548 2.21c9.056 0 14.008-7.52 14.008-14.036 0-.214-.005-.426-.014-.637A9.936 9.936 0 0 0 24 4.557z" />
+        </svg>
+      </a>
+      <a href="#" class="text-gray-500 hover:text-sky-600">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-6 w-6" viewBox="0 0 24 24">
+          <path
+            d="M12 2.04c-5.522 0-10 4.477-10 10.005 0 4.991 3.657 9.128 8.438 9.877v-6.987H7.898V12.04h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.093 0 2.237.195 2.237.195v2.47h-1.261c-1.244 0-1.63.773-1.63 1.564v1.904h2.773l-.443 2.895h-2.33v6.987C18.343 21.173 22 17.036 22 12.045c0-5.528-4.478-10.005-10-10.005z" />
+        </svg>
+      </a>
+      <a href="#" class="text-gray-500 hover:text-sky-600">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-6 w-6" viewBox="0 0 24 24">
+          <path
+            d="M19.615 3.184a.718.718 0 0 0-.718-.718H5.103a.718.718 0 0 0-.718.718v17.632a.718.718 0 0 0 .718.718h13.794a.718.718 0 0 0 .718-.718V3.184zm-2.435 5.642h-2.221v9.443h-2.924V8.826H10.26V6.497h1.775V4.893c0-1.664.868-4.16 4.159-4.16l2.875.012v2.594h-2.089c-.342 0-.82.171-.82.897v2.261h2.862l-.243 2.348z" />
+        </svg>
+      </a>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="mt-12 text-sm text-gray-500">
+      © <span id="year"></span> LCIC — All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>

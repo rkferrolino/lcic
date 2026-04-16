@@ -1,0 +1,1704 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>LCIC</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="site-base" content="https://demo.chronostep.com//develop/new-lcic/">
+    <script src="assets/js/tailwind-browser.js"></script>
+    <script src="assets/js/language-handler.js" defer></script>
+    <script src="assets/js/translation.js"></script>
+    <!-- <link rel="icon" type="image/png" href="assets/img/favicon.png"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<body class="text-en" data-transparent-header="true">
+    <section class="relative min-h-screen overflow-hidden">
+        <!-- <div class="relative pr-0 2xl:pr-[95px]"> -->
+        <div class="absolute inset-0 pr-0 2xl:pr-[95px]">
+            <div class="w-full h-full 
+            bg-[linear-gradient(#2222228D,_#2222228D),url('assets/img/banner-img-cropped.webp')] 
+            bg-cover bg-center rounded-br-[70px]">
+            </div>
+        </div>
+        <!-- <div
+                class="w-full absolute inset-0 
+        bg-[linear-gradient(#2222228D,_#2222228D),url('assets/img/banner-img-cropped.webp')] 
+        bg-cover bg-center rounded-br-[70px]">
+            </div> -->
+        <!-- <div class="relative w-full h-screen rounded-br-[70px] overflow-hidden">
+
+                <img 
+                src="assets/img/banner-img-cropped-1600.webp"
+                srcset="
+                    assets/img/banner-img-cropped-640.webp 640w,
+                    assets/img/banner-img-cropped-768.webp 768w,
+                    assets/img/banner-img-cropped-1024.webp 1024w,
+                    assets/img/banner-img-cropped-1600.webp 1600w
+                "
+                sizes="100vw"
+                alt="Banner"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="eager"
+                fetchpriority="high"
+                width="1600"
+                height="900"
+                />
+
+                <div class="absolute inset-0 bg-[#2222228D]"></div>
+
+            </div> -->
+        <!-- </div> -->
+        <header id="mainHeader" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-transparent">
+            <div class="relative bg-transparent w-full">
+                <div
+                    class="max-w-7xl mx-auto flex items-center justify-between min-h-[70px] sm:min-h-[82px] lg:min-h-[92px]">
+                    <div class="flex items-center space-x-2 self-start xl:self-auto max-xl:pt-[16px] max-md:pt-[10px]">
+                        <a href="index.html">
+                            <img src="assets/img/brand-logo-white.webp" alt="Logo" class="w-50 lg:w-55 2xl:w-65">
+                        </a>
+                    </div>
+                    <!-- Mobile Menu + Language Buttons -->
+                    <div class="block min-[1340px]:hidden fixed top-0 right-0 flex z-50">
+                        <!-- MENU button -->
+                        <button
+                            onclick="document.getElementById('mobileMenu').classList.remove('hidden'); forceWhiteLogoWhenMenuOpen();"
+                            class="flex flex-col justify-center items-center w-[75px] sm:w-[85px] lg:w-[95px] bg-[#004485] gap-[4px] min-h-[70px] sm:min-h-[82px] lg:min-h-[92px]">
+                            <img src="assets/img/menu.webp" alt="Menu" class="w-6 h-6 mb-[2px]">
+                            <span class="font-[600] text-[12px] leading-[16px] text-white ">MENU</span>
+                        </button>
+                        <!-- Language button  -->
+                        <!-- <button onclick="document.getElementById('mobileLanguage').classList.remove('hidden'); updateLanguage();" -->
+                        <!-- <button
+                            class="flex flex-col justify-center items-center w-[75px] h-[70px] sm:w-[85px] sm:h-[82px] lg:w-[95px] lg:h-[92px] bg-[#BAD8F6] gap-[1px]">
+                            <img src="assets/img/lang.webp" alt="Language" class="w-6 h-6 mb-[2px]">
+                            <span id="langTextMobile"
+                                class="font-[600] text-[12px] leading-[16px] text-[#0055A6] ">EN</span>
+                        </button> -->
+                    </div>
+                </div>
+                <nav
+                    class="hidden min-[1340px]:flex absolute text-[#fff] right-0 top-0 h-full items-center min-[1340px]:pr-0 2xl:pr-35 whitespace-nowrap">
+                    <div
+                        class="relative group/study flex items-stretch h-full gap-1 transition-colors duration-300 js-nav-parent">
+                        <a
+                            class="px-3 md:px-3 lg:px-4 text-[14px] md:text-[15px] lg:text-[16px] hover:bg-[#0055A6] flex items-center gap-1 transition-colors duration-300 group-hover/study:text-[#FFFFFF] js-nav-toggle cursor-pointer">
+                            <span>Study</span>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-4 h-4 transform transition-transform duration-300 js-nav-arrow" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </a>
+                        <div
+                            class="fixed left-0 hidden w-screen justify-center bg-[#0055A6]/90 z-40 transition-all duration-300 top-[70px] md:top-[120px] lg:top-[120px] xl:top-[92px] max-lg:mt-[37px] max-xl:mt-[48px] hidden js-nav-menu">
+                            <div class="flex flex-row items-center w-full max-w-7xl h-[70px] sm:h-[76px] px-4 sm:px-8">
+                                <div
+                                    class="w-[90px] md:w-[100px] lg:w-[120px] h-[32px] sm:h-[36px] flex items-center border-r border-[#FFFFFF] lg:pr-6">
+                                    <span
+                                        class="text-[18px] sm:text-[20px] lg:text-[24px] font-semibold text-[#A6CAED] tracking-wide">Study</span>
+                                </div>
+                                <div class="flex sm:flex-nowrap justify-start gap-x-[25px] gap-y-[15px]
+                                        px-[10px] sm:px-[20px] lg:px-[25px] xl:px-[40px]
+                                        text-[11px] sm:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[16px]
+                                        font-semibold">
+                                    <div class="relative group/inner">
+                                        <a
+                                            class="flex items-center gap-2 transition-colors duration-300 group-hover/inner:text-white text-[#ffffff] js-dropdown-toggle cursor-pointer">
+                                            <span>Programs</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="w-4 h-4 transform transition-transform duration-300 js-inner-arrow"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </a>
+
+                                        <div class="absolute left-0 top-full hidden flex-wrap gap-x-[20px] gap-y-[10px]
+                                                bg-[#0055A6]/95 p-4 rounded-xl shadow-lg z-50 js-dropdown-menu-inner">
+                                            <a href="civil-engineering.html" class="text-white whitespace-nowrap">Civil
+                                                Engineering</a>
+                                            <a href="physical-therapy.html"
+                                                class="text-white whitespace-nowrap">Physical
+                                                Therapy</a>
+                                            <a href="tourism-management.html"
+                                                class="text-white whitespace-nowrap">Tourism Management</a>
+                                            <a href="foreign-language.html" class="text-white whitespace-nowrap">Foreign
+                                                Language</a>
+                                            <a href="english-language-studies.html"
+                                                class="text-white whitespace-nowrap">English Language Studies</a>
+                                            <a href="cels.html" class="text-white whitespace-nowrap">CELS</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="relative group/inner">
+                                        <a href="scholarship-financial-aid.html"
+                                            class="flex items-center gap-2 transition-colors duration-300 group-hover/inner:text-white cursor-pointer text-[#ffffff]">
+                                            <span>Scholarship and Financial Aids</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="relative group/inner">
+                                        <a
+                                            class="flex items-center gap-2 transition-colors duration-300 group-hover/inner:text-white text-[#ffffff] js-dropdown-toggle cursor-pointer">
+                                            <span>How to apply</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="w-4 h-4 transform transition-transform duration-300 js-inner-arrow"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </a>
+
+                                        <div class="absolute left-0 top-full hidden flex-wrap gap-x-[20px] gap-y-[10px]
+                                                bg-[#0055A6]/95 p-4 rounded-xl shadow-lg z-50 js-dropdown-menu-inner">
+                                            <a href="admission-process.html"
+                                                class="text-[#FFFFFF] whitespace-nowrap">Admission Process</a>
+                                            <a href="admission-requirements.html"
+                                                class="text-[#FFFFFF] whitespace-nowrap">Admission Requirements</a>
+                                            <a href="payment-options.html"
+                                                class="text-[#FFFFFF] whitespace-nowrap">Payment Options</a>
+                                            <a href="academic-calendar.html"
+                                                class="text-[#FFFFFF] whitespace-nowrap">Academic Calendar</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="relative group flex items-stretch h-full gap-1 transition-colors duration-300 js-nav-parent">
+                        <a
+                            class="px-3 md:px-3 lg:px-4 text-[14px] md:text-[15px] hover:bg-[#0055A6] lg:text-[16px] flex items-center gap-1 transition-colors duration-300 group-hover:text-[#FFFFFF] js-nav-toggle cursor-pointer">
+                            <span>Student Life</span>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-4 h-4 transform transition-transform duration-300 js-nav-arrow" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </a>
+                        <div
+                            class="fixed left-0 hidden w-screen justify-center bg-[#0055A6]/90 z-40 transition-all duration-300 top-[70px] md:top-[120px] lg:top-[120px] xl:top-[92px] max-lg:mt-[37px] max-xl:mt-[48px] js-nav-menu">
+                            <div class="flex flex-row items-center w-full max-w-7xl h-[70px] sm:h-[76px] px-4 sm:px-8">
+                                <div
+                                    class="w-[100px] md:w-[150px] lg:w-[180px] xl:w-[200px] h-[32px] sm:h-[36px] flex items-center border-r border-[#FFFFFF] lg:pr-6">
+                                    <span
+                                        class="text-[18px] sm:text-[20px] lg:text-[24px] font-semibold text-[#A6CAED] tracking-wide">Student
+                                        Life</span>
+                                </div>
+                                <div
+                                    class="flex sm:flex-wrap xl:flex-nowrap justify-start gap-x-[25px] gap-y-[15px] px-[10px] sm:px-[20px] lg:px-[25px] xl:px-[40px] text-[11px] sm:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[16px] font-semibold">
+                                    <a href="ses.html" class="text-[#FFFFFF] whitespace-nowrap">Student Experience and
+                                        Success </a>
+                                    <a href="alumni-and-placement.html" class="text-[#FFFFFF] whitespace-nowrap">Alumni
+                                        and
+                                        Placement</a>
+                                    <a href="dormitory.html" class="text-[#FFFFFF] whitespace-nowrap">Dormitory</a>
+                                    <a href="https://www.mycamu.com/" target="_blank"
+                                        class="text-[#FFFFFF] whitespace-nowrap">Student
+                                        Portal</a>
+                                    <a href="campus-facilities.html" class="text-[#FFFFFF] whitespace-nowrap">Campus
+                                        Facilities</a>
+                                    <a href="library.html" class="text-[#FFFFFF] whitespace-nowrap">Library
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="relative group flex items-stretch h-full gap-1 transition-colors duration-300 js-nav-parent">
+                        <a
+                            class="px-3 md:px-3 lg:px-4 text-[14px] md:text-[15px] hover:bg-[#0055A6] lg:text-[16px] flex items-center gap-1 transition-colors duration-300 group-hover:text-[#FFFFFF] js-nav-toggle cursor-pointer">
+                            <span>Discover Us</span>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-4 h-4 transform transition-transform duration-300 js-nav-arrow" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </a>
+                        <div
+                            class="fixed left-0 hidden  w-screen justify-center bg-[#0055A6]/90 z-40 transition-all duration-300 top-[70px] md:top-[120px] lg:top-[120px] xl:top-[92px] max-lg:mt-[37px] max-xl:mt-[48px] js-nav-menu">
+                            <div class="flex flex-row items-center w-full max-w-7xl h-[70px] sm:h-[76px] px-4 sm:px-8">
+                                <div
+                                    class="w-[100px] md:w-[150px] lg:w-[180px] xl:w-[200px] h-[32px] sm:h-[36px] flex items-center border-r border-[#FFFFFF] lg:pr-6">
+                                    <span
+                                        class="text-[18px] sm:text-[20px] lg:text-[24px] font-semibold text-[#A6CAED] tracking-wide">Discover
+                                        Us</span>
+                                </div>
+                                <div
+                                    class="flex sm:flex-wrap xl:flex-nowrap justify-start gap-x-[25px] gap-y-[15px] px-[10px] sm:px-[20px] lg:px-[25px] xl:px-[40px] text-[11px] sm:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[16px] font-semibold">
+                                    <a href="at-a-glance.html" class="text-[#FFFFFF] whitespace-nowrap">At A
+                                        Glance</a>
+                                    <a href="success-roadmap.html" class="text-[#FFFFFF] whitespace-nowrap">Success
+                                        Roadmap</a>
+                                    <a href="virtual-visit.html" class="text-[#FFFFFF] whitespace-nowrap">Virtual
+                                        Visit</a>
+                                    <a href="governance.html" class="text-[#FFFFFF] whitespace-nowrap">Governance
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group flex items-stretch h-full gap-1 transition-colors duration-300">
+                        <a href="research-and-extension.html"
+                            class="px-3 md:px-3 lg:px-4 text-[14px] md:text-[15px] lg:text-[16px] hover:bg-[#0055A6] flex items-center gap-1 transition-colors duration-300 group-hover:text-[#FFFFFF] active:text-white">
+                            <span>Research and Extension</span>
+                        </a>
+                    </div>
+                    <div class="relative group flex items-stretch h-full gap-1 transition-colors duration-300">
+                        <a href="network-and-linkages.html"
+                            class="px-3 md:px-3 lg:px-4 text-[14px] md:text-[15px] lg:text-[16px] hover:bg-[#0055A6] flex items-center gap-1 transition-colors duration-300 group-hover:text-[#FFFFFF] active:text-white">
+                            <span>Network and Linkages</span>
+                        </a>
+                    </div>
+                    <div class="relative group flex items-stretch h-full gap-1 transition-colors duration-300">
+                        <a href="careers.html"
+                            class="px-3 md:px-3 lg:px-4 text-[14px] md:text-[15px] lg:text-[16px] hover:bg-[#0055A6] flex items-center gap-1 transition-colors duration-300 group-hover:text-[#FFFFFF] active:text-white">
+                            <span>Careers</span>
+                        </a>
+                    </div>
+
+                    <div class="relative group flex items-stretch h-full gap-1 transition-colors duration-300">
+                        <a href="get-in-touch.html"
+                            class="px-3 md:px-3 lg:px-4 text-[14px] md:text-[15px] lg:text-[16px] hover:bg-[#0055A6] flex items-center gap-1 transition-colors duration-300 group-hover:text-[#FFFFFF] active:text-white">
+                            <span>Get In Touch</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- MOBILE MENU MODAL -->
+        <header id="mobileMenu" class="fixed inset-0 z-[100] flex bg-[#004485] text-white hidden">
+            <div class="flex flex-col w-full min-h-screen py-30 px-15 overflow-y-auto relative">
+                <!-- TOP BAR (Logo + Buttons) -->
+                <div class="flex items-center justify-between w-full fixed top-0 left-0 bg-[#004485] px-0 py-0 z-50">
+                    <!-- Logo -->
+                    <div class="flex items-center space-x-2 pt-[4px]">
+                        <a href="index.html">
+                            <img src="assets/img/brand-logo-white.webp" alt="Logo" class="w-50 lg:w-55 2xl:w-65">
+                        </a>
+                    </div>
+                    <!-- Buttons (Close + Language) -->
+                    <div class="flex right-0">
+                        <!-- CLOSE button -->
+                        <button
+                            onclick="document.getElementById('mobileMenu').classList.add('hidden'); updateHeaderOnScroll();"
+                            class="flex flex-col justify-center items-center w-[75px] sm:w-[85px] lg:w-[95px] bg-[#004485] gap-[4px] min-h-[70px] sm:min-h-[82px] lg:min-h-[92px]">
+                            <img src="assets/img/close.webp" alt="Close" class="w-6 h-6 mb-[2px]">
+                            <span class="font-[600] text-[12px] leading-[16px] text-white ">
+                                MENU
+                            </span>
+                        </button>
+                        <!-- LANGUAGE button -->
+                        <!-- <button
+                            class="flex flex-col justify-center items-center w-[75px] h-[70px] sm:w-[85px] sm:h-[82px] lg:w-[95px] lg:h-[92px] bg-[#BAD8F6] gap-[1px]">
+                            <img src="assets/img/lang.webp" alt="Language" class="w-6 h-6 mb-[2px]">
+                            <span id="langTextMobileMenu" class="font-[600] text-[12px] leading-[16px] text-[#0055A6] ">
+                                EN
+                            </span>
+                        </button> -->
+                    </div>
+                </div>
+                <div class="flex flex-col w-full">
+                    <nav class="flex flex-col gap-[20px] sm:gap-[30px] md:gap-[40px] lg:gap-[50px] pb-[80px]">
+                        <!-- STUDY SECTION FOR MOBILE MENU -->
+                        <div>
+                            <button onclick="toggleDropdown('mobileStudyDropdown')"
+                                class="flex justify-between items-center w-full text-[16px] font-semibold gap-6">
+                                <span>Study</span>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-[24px] h-[24px] transition-transform duration-200"
+                                    id="icon-mobileStudyDropdown" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+
+                            <ul id="mobileStudyDropdown"
+                                class="hidden flex flex-col mt-4 pl-4 text-[14px] font-normal gap-y-6">
+                                <!-- Programs Dropdown -->
+                                <li>
+                                    <button onclick="toggleDropdown('mobileProgramsDropdown')"
+                                        class="flex justify-between items-center w-full text-[16px] font-normal">
+                                        <span>Programs</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="w-5 h-5 transition-transform duration-200"
+                                            id="icon-mobileProgramsDropdown" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <ul id="mobileProgramsDropdown"
+                                        class="hidden  flex flex-col mt-2 pl-4 gap-2 text-[16px] font-normal gap-y-5 pt-3">
+                                        <li><a href="civil-engineering.html">Civil Engineering</a></li>
+                                        <li><a href="physical-therapy.html">Physical Therapy</a></li>
+                                        <li><a href="tourism-management.html">Tourism Management</a></li>
+                                        <li><a href="foreign-language.html">Foreign Language</a></li>
+                                        <li><a href="english-language-studies.html">English Language Studies</a></li>
+                                        <li><a href="cels.html">CELS</a></li>
+                                        <!-- <li><a href="research-extension-library.html">Research, Extension and
+                                                Library</a></li> -->
+                                    </ul>
+                                </li>
+
+                                <!-- Scholarship & Financial Aid Dropdown -->
+                                <li>
+                                    <a href="scholarship-financial-aid.html"
+                                        class="flex justify-between items-center w-full text-[16px] font-normal">
+                                        <span>Scholarship & Financial Aid</span>
+                                    </a>
+                                </li>
+
+                                <!-- How to Apply Dropdown -->
+                                <li>
+                                    <button onclick="toggleDropdown('mobileApplyDropdown')"
+                                        class="flex justify-between items-center w-full text-[16px] font-normal">
+                                        <span>How to Apply</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="w-5 h-5 transition-transform duration-200"
+                                            id="icon-mobileApplyDropdown" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <ul id="mobileApplyDropdown"
+                                        class="hidden  flex flex-col mt-2 pl-4 gap-2 text-[16px] font-normal gap-y-5 pt-3">
+                                        <li><a href="admission-process.html">Admission Process</a></li>
+                                        <li><a href="admission-requirements.html">Admission Requirements</a></li>
+                                        <li><a href="payment-options.html">Payment Options</a></li>
+                                        <li><a href="academic-calendar.html">Academic Calendar</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Student Life -->
+                        <div>
+                            <button onclick="toggleDropdown('studentServicesDropdown')"
+                                class="flex justify-between items-center w-full text-[16px] font-semibold">
+                                <span>Student Life</span>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-[24px] h-[24px] transition-transform duration-200"
+                                    id="icon-studentServicesDropdown" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <ul id="studentServicesDropdown"
+                                class="hidden flex-col gap-6 mt-4 pl-4 text-[16px] font-normal">
+                                <li class="my-[20px]">
+                                    <a href="ses.html">Student Experience and Success</a>
+                                </li>
+                                <li class="my-[20px]">
+                                    <a href="alumni-and-placement.html">Alumni and Placement</a>
+                                </li>
+                                <li class="my-[20px]">
+                                    <a href="dormitory.html">Dormitory</a>
+                                </li>
+                                <li class="my-[20px]">
+                                    <a href="https://www.mycamu.com/" target="_blank">Student Portal</a>
+                                </li>
+                                <li class="my-[20px]">
+                                    <a href="campus-facilities.html">Campus Facilities</a>
+                                </li>
+                                <li class="my-[20px]">
+                                    <a href="library.html">Library</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!-- Discover Us -->
+                        <div>
+                            <button onclick="toggleDropdown('aboutUsDropdown')"
+                                class="flex justify-between items-center w-full text-[16px] font-semibold">
+                                <span>Discover Us</span>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-[24px] h-[24px] transition-transform duration-200"
+                                    id="icon-aboutUsDropdown" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <ul id="aboutUsDropdown" class="hidden flex-col pl-[24px] text-[14px] font-normal">
+                                <li class="my-[20px]">
+                                    <a href="at-a-glance.html">At A Glance</a>
+                                </li>
+                                <li class="my-[20px]">
+                                    <a href="success-roadmap.html">Success Roadmap</a>
+                                </li>
+                                <li class="my-[20px]">
+                                    <a href="virtual-visit.html">Virtual Visit</a>
+                                </li>
+                                <li class="my-[20px]">
+                                    <a href="governance.html">Governance</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Research and Extension -->
+                        <div>
+                            <a href="research-and-extension.html"
+                                class="flex justify-between items-center w-full text-[16px] font-semibold">Research and
+                                Extension</a>
+                        </div>
+                        <!-- Network and Linkages -->
+                        <div>
+                            <a href="network-and-linkages.html"
+                                class="flex justify-between items-center w-full text-[16px] font-semibold">Network and
+                                Linkages</a>
+                        </div>
+                        <!-- Careers -->
+                        <div>
+                            <a href="careers.html"
+                                class="flex justify-between items-center w-full text-[16px] font-semibold">Careers</a>
+                        </div>
+
+                        <div>
+                            <a href="get-in-touch.html"
+                                class="flex justify-between items-center w-full text-[16px] font-semibold">Get In
+                                Touch</a>
+                        </div>
+                    </nav>
+                    <!-- SEARCH BOX -->
+                    <!-- <div class="flex h-[44px] rounded-[8px] overflow-hidden border border-white w-full mx-auto">
+                        <input type="text" data-text-key="FindSomething" placeholder=""
+                            class="flex-grow bg-transparent placeholder-[#DFEFFF] text-[#DFEFFF] px-4 sm:px-8 text-[14px] font-light outline-none min-w-0">
+                        <button class="bg-white w-[44px] h-[44px] flex justify-center items-center p-[12px]">
+                            <img src="assets/img/search.webp" alt="" class="w-[16px] h-[16px] sm:w-[20px] sm:h-[20px]">
+                        </button>
+                    </div> -->
+                </div>
+            </div>
+        </header>
+        <!-- MOBILE LANGUAGE MODAL -->
+        <header id="mobileLanguage" class="fixed inset-0 z-[100] flex bg-[#A6CAED] text-white hidden">
+            <div class="flex flex-col w-full min-h-screen py-30 px-15 overflow-y-auto relative">
+                <!-- TOP BAR (Logo + Buttons) -->
+                <div class="flex items-center justify-between w-full fixed top-0 left-0 bg-[#A6CAED] px-0 py-0 z-50">
+                    <!-- Logo -->
+                    <div class="flex items-center space-x-2 pt-[4px]">
+                        <a href="index.html">
+                            <img src="assets/img/brand-logo-white.webp" alt="Logo" class="w-50 sm:w-auto">
+                        </a>
+                    </div>
+                    <!-- Buttons (Close + Language) -->
+                    <div class="flex right-0">
+                        <!-- CLOSE button -->
+                        <button
+                            class="flex flex-col justify-center items-center w-[75px] sm:w-[85px] lg:w-[95px] bg-[#004485] gap-[4px] min-h-[70px] sm:min-h-[82px] lg:min-h-[92px]">
+                            <img src="assets/img/menu.webp" alt="Close" class="w-6 h-6 mb-[2px]">
+                            <span class="font-[600] text-[12px] leading-[16px] text-white ">
+                                MENU
+                            </span>
+                        </button>
+                        <!-- LANGUAGE button -->
+                        <!-- <button
+                            onclick="document.getElementById('mobileLanguage').classList.add('hidden'); updateLanguage();" -->
+                        <!-- <button
+                            
+                            class="flex flex-col justify-center items-center w-[75px] h-[70px] sm:w-[85px] sm:h-[82px] lg:w-[95px] lg:h-[92px] bg-[#BAD8F6] gap-[1px]">
+                            <img src="assets/img/lang.webp" alt="Language" class="w-6 h-6 mb-[2px]">
+                            <span id="langTextMobileLanguage"
+                                class="font-[600] text-[12px] leading-[16px] text-[#0055A6] ">
+                                EN
+                            </span>
+                        </button> -->
+                    </div>
+                </div>
+                <!-- <nav class="flex flex-col items-start gap-[20px] sm:gap-[30px] md:gap-[40px] lg:gap-[50px]">
+                    <a onclick="document.getElementById('mobileLanguage').classList.add('hidden'); setLanguage('en')"
+                    <a
+                        class="flex justify-between items-center w-full text-[16px] font-semibold text-[#0055A6]">
+                        English
+                    </a>
+                    <a onclick="document.getElementById('mobileLanguage').classList.add('hidden'); setLanguage('jp')"
+                        class="flex justify-between items-center w-full text-[16px] font-semibold text-[#0055A6]">
+                        Japanese
+                    </a>
+                    <a href="#"
+                        class="flex justify-between items-center w-full text-[16px] font-semibold text-[#0055A6]">
+                        한국어
+                    </a>
+                    <a href="#"
+                        class="flex justify-between items-center w-full text-[16px] font-semibold text-[#0055A6]">
+                        繁體中文
+                    </a>
+                    <a href="#"
+                        class="flex justify-between items-center w-full text-[16px] font-semibold text-[#0055A6]">
+                        tiếng việt
+                    </a>
+                </nav> -->
+            </div>
+        </header>
+        <div class="relative z-10 flex min-h-screen 
+        items-center 
+        [@media(max-height:700px)]:items-start 
+        [@media(max-height:700px)]:pt-35">
+
+            <div class="max-w-7xl mx-auto w-full px-4 [@media(max-height:700px)]:pb-[90px]">
+
+                <div class="w-[50%] max-lg:w-full">
+
+                    <!-- LABEL -->
+                    <span class="asap-font bg-[#DFEFFF] asap-font text-[#0055A6] px-[12px] py-[8px]  text-[12px] font-bold rounded-[5px] tracking-[1px] mb-[10px] max-md:mb-[5px] w-fit block">
+                        Lapulapu-Cebu International College
+                    </span>
+
+                    <!-- TITLE -->
+                    <h1 class="w-full md:w-[700px] text-[80px] text-white tracking-[4%] sm:tracking-[8px] leading-[120%] sm:leading-[130%] font-bold max-sm:text-[40px] 
+                        [@media(max-width:1024px)_and_(max-height:600px)]:text-[50px]
+                        [@media(max-width:1024px)_and_(max-height:768px)]:text-[50px]
+                        [@media(max-width:414px)]:text-[40px]
+                        ">
+                        Lapulapu-Cebu International College
+                    </h1>
+
+                    <!-- DESCRIPTION -->
+                    <p class="text-[24px] text-white font-medium tracking-[1px] max-md:text-[12px]  
+                        [@media(max-width:1024px)_and_(max-height:600px)]:text-[16px]
+                        [@media(max-width:1024px)_and_(max-height:768px)]:text-[16px]">
+                        Providing international education in Cebu, Philippines,
+                        and cultivating global talent.
+                    </p>
+
+                    <!-- BUTTONS -->
+                    <div class="flex gap-4 mt-10 max-md:flex-col">
+
+                        <!-- BTN 1 -->
+                        <a href="admission-process.html" class="inline-flex items-center justify-center gap-2 
+                        bg-[#0055A6] text-white 
+                        px-8 py-4 rounded-full font-semibold 
+                        hover:bg-[#004a8f] transition">
+                            <span data-text-key="AdmissionGuide" class="whitespace-nowrap">Admission Guide</span>
+                            <svg viewBox="0 0 24 24" class="shrink-0 size-5 -mr-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14M13 5l7 7-7 7"></path>
+                                </svg>
+                        </a>
+
+                        <!-- BTN 2 -->
+                        <a href="at-a-glance.html" class="inline-flex items-center justify-center gap-2 
+                        bg-white text-[#0055A6] 
+                        px-8 py-4 rounded-full font-semibold 
+                        hover:bg-gray-100 transition">
+                            <span class="whitespace-nowrap">About the College </span>
+                            <svg viewBox="0 0 24 24" class="shrink-0 size-5 -mr-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14M13 5l7 7-7 7"></path>
+                                </svg>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="absolute bottom-4 right-4 flex flex-col items-center gap-2 pointer-events-none select-none max-md:right-[40%] max-md:hidden text-white 2xl:text-black">
+            <span class="block mb-[28px]">
+                <span
+                    class="asap-font inline-block rotate-90 origin-center tracking-widest text-sm leading-none max-md:text-white">Scrolldown</span>
+            </span>
+            <span
+                class="w-px h-12 bg-gradient-to-b from-white/40 to-transparent origin-top [animation:scrollline_1.2s_ease-in-out_infinite] 2xl:from-black/40"></span>
+        </div>
+    </section>
+    <div>
+        <div class="bg-white px-10 py-20 rounded-t-[60px] max-md:py-10 max-md:px-0">
+            <div class="max-w-7xl mx-auto px-6 py-10 md:py-20 max-md:px-[15px]">
+                <!-- Heading -->
+                <div class="text-center wow fadeInUp">
+                    <p
+                        class="asap-font font-semibold mx-auto w-fit tracking-wide flex items-center gap-2 text-[#002242] text-3xl max-sm:text-[18px]">
+                        <img src="assets/img/logomark-small.webp" alt="logomark">
+                        Enroll Now!
+                    </p>
+                    <h2
+                        class="mt-3 text-[26px] sm:text-[40px] md:text-[50px] lg:text-[60px] font-extrabold text-slate-900 tracking-wide">
+                        The Gateway to Your Global<br> Learning Experience
+                    </h2>
+
+                    <p class="mt-6 text-slate-600 text-base sm:text-lg leading-relaxed">
+                        Welcome to Lapulapu-Cebu International College (LCIC), a premier academic
+                        destination where the vibrant spirit of Mactan converges with world-class
+                        standards of excellence. Guided by a distinctive Japanese–Filipino educational
+                        synergy and supported by a distinguished circle of globally respected educators
+                        and industry leaders, LCIC stands at the crossroads of tradition, innovation, and
+                        global relevance. Situated along the historic and dynamic shores of Mactan in
+                        Lapu-Lapu City, Cebu, LCIC is more than a college—it is a multicultural ecosystem
+                        and a high-energy learning hub dedicated to shaping the next generation of
+                        leaders, innovators, and global citizens.<br><br>
+                        Your journey doesn't just start here—it accelerates here. At LCIC, we are bridging
+                        communities, shattering glass ceilings, and empowering a new generation of
+                        multilingual, industry-ready professionals.
+                    </p>
+                </div>
+
+                <!-- video wrapper -->
+                <section class="container mx-auto px-4 py-24">
+                    <div class="flex justify-center">
+                        <div class="w-full xl:w-12/12 relative">
+                            <!-- 16:9 Video Wrapper -->
+                            <div
+                                class="w-full pb-[56.25%] overflow-hidden lg:after:content-[''] lg:after:absolute lg:after:h-[100%] lg:after:-bottom-[80px] lg:after:-right-[127px] lg:after:-z-10 lg:after:bg-no-repeat lg:after:bg-[url('assets/img/video.svg')]">
+                                <video class="absolute inset-0 w-full h-full object-cover z-10" autoplay loop
+                                    playsinline muted controls>
+                                    <source src="assets/img/vid.mp4" type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="relative pt-[300px] mt-[-570px] overflow-hidden">
+            <!-- class="bg-[url('assets/img/why-choose.webp')] bg-cover bg-bottom pt-[300px] mt-[-570px] -->
+            <img src="assets/img/why-choose-1600.webp" srcset="
+                assets/img/why-choose-640.webp 640w,
+                assets/img/why-choose-768.webp 768w,
+                assets/img/why-choose-1024.webp 1024w,
+                assets/img/why-choose-1600.webp 1600w
+                " sizes="100vw" alt="Why Choose Us" class="absolute inset-0 w-full h-full object-cover z-0
+                [@media(max-width:1024px)_and_(max-height:600px)]:pt-[70%]
+                [@media(max-width:1024px)_and_(max-height:768px)]:pt-[70%]" loading="lazy" decoding="async"
+                width="1600" height="900" />
+            <div class="max-w-7xl mx-auto">
+                <div class="flex justify-center mt-40 md:mt-20 wow fadeInUp
+                [@media(max-width:1024px)_and_(max-height:600px)]:px-[90px]
+                [@media(max-width:1024px)_and_(max-height:768px)]:px-[90px]">
+                    <a href="https://cels.lcic.edu.ph/" target="_blank"
+                        class="flex flex-col md:flex-row items-center gap-6 md:gap-12 hover:opacity-90 transition cursor-pointer">
+
+                        <!-- Big logo on left -->
+                        <img src="assets/img/sis-logo2.webp"
+                            class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-80 lg:h-auto object-contain rounded-full wow fadeInLeft"
+                            alt="LCIC-CELS Logo">
+
+                        <!-- Name text on right, two lines -->
+                        <div class="text-center md:text-left wow fadeInRight">
+                            <span
+                                class="block text-[18px] sm:text-[26px] md:text-[34px] lg:text-[40px] font-extrabold leading-snug text-slate-900 tracking-wide">
+                                LCIC-CELS: English Language <br>
+                                Studies for International Students
+                            </span>
+                        </div>
+
+                    </a>
+                </div>
+            </div>
+            <section class="pt-[50px] max-md:pb-[50px]">
+                <div
+                    class="max-w-7xl mx-auto px-6 py-10 md:py-20 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    <!-- Left copy -->
+                    <div class="wow fadeInUp">
+                        <p
+                            class="asap-font font-semibold tracking-wide flex items-center gap-2 text-[#002242] text-3xl max-sm:text-[18px]">
+                            <img src="assets/img/logomark-small.webp" alt="logomark">
+                            Why Choose LCIC?
+                        </p>
+                        <h2 data-text-key="ExcellenceInLearning"
+                            class="mt-3 text-[28px] sm:text-[36px] md:text-[44px] lg:text-[60px] font-extrabold leading-tight text-slate-900 tracking-wide">
+                        </h2>
+                        <p data-text-key="ExcellenceInLearningParagraph"
+                            class="mt-6 text-slate-600 text-base sm:text-lg leading-relaxed"></p>
+                    </div>
+                    <!-- Right image -->
+                    <div class="relative mx-auto lg:ml-auto lg:pt-[100px] wow fadeInDown">
+                        <div
+                            class="mt-4 w-full max-w-[600px] mx-auto [@media(min-width:375px)]:-ml-[35px] [@media(min-width:375px)]:-mr-[25px] [@media(min-width:375px)]:w-[120%]">
+                            <img data-text-key="StrongPoints" class="w-full h-auto" alt="Strong Points" loading="lazy"
+                                decoding="async" width="1024" height="600">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="bg-white px-10 rounded-t-[60px] max-md:px-0">
+            <div class="max-w-7xl mx-auto xl:px-6 md:py-20">
+
+                <!-- Heading -->
+                <div class="text-center wow fadeInUp">
+                    <p
+                        class="asap-font font-semibold tracking-wide flex items-center gap-2 text-[#002242] text-3xl max-sm:text-[18px] justify-center mx-auto">
+                        <img src="assets/img/logomark-small.webp" alt="">
+                        News and Updates
+                    </p>
+
+                    <h2
+                        class="mt-3 text-[30px] sm:text-[40px] md:text-[50px] lg:text-[60px] font-extrabold text-slate-900 tracking-wide">
+                        WHAT'S HAPPENING AT LCIC
+                    </h2>
+
+                    <p class="mt-6 text-slate-600 text-base sm:text-lg leading-relaxed">
+                        We are continuously updating the latest news and updates regarding LCIC. <br>
+                        Check back so you don't miss out!
+                    </p>
+                </div>
+
+                <!-- Slick Slider -->
+                <div class="mt-14">
+                    <div class="news-slider">
+
+                        <!-- Slide -->
+                        <div class="px-3 wow fadeInRight" data-wow-delay="0.1s">
+                            <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+                                <img src="assets/img/news-4.webp" alt="" class="w-full h-[220px] object-cover">
+
+                                <div class="p-6">
+                                    <p class="text-xs text-slate-500 mb-2">
+                                        March 16, 2026
+                                    </p>
+
+                                    <h3 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
+                                        LCIC Launches Vision Dialogue as New President Meets Student Leaders
+                                    </h3>
+
+                                    <p class="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-2">
+                                        Student leaders from various departments gathered earlier today,
+                                        March 16, 2026, for a strategic meeting titled
+                                        “Launching LCIC’s Future: New President’s Vision,”
+                                        held at the Science Building, Room 108, from 10:00 AM to 12:00 NN.
+                                    </p>
+
+                                    <a href="lcic-launches-vision-dialogue-as-new-president-meets-student-leaders.html"
+                                        class="inline-flex items-center gap-2 text-sm font-semibold text-[#0055A6] hover:underline">
+                                        Read More
+                                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide -->
+                        <div class="px-3 wow fadeInRight" data-wow-delay="0.1s">
+                            <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+                                <img src="assets/img/news-5.webp" alt="" class="w-full h-[220px] object-cover">
+
+                                <div class="p-6">
+                                    <p class="text-xs text-slate-500 mb-2">
+                                        March 13 – 15, 2026
+                                    </p>
+
+                                    <h3 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
+                                        LCIC Soars Success at 11th International Travel Festival; Quimat Secures 2nd in
+                                        Tour Vlogging
+                                    </h3>
+
+                                    <p class="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-2">
+                                        CEBU CITY, Philippines — Lapulapu-Cebu International College (LCIC)
+                                        took flight at the return of the 11th International Travel Festival (ITF),
+                                        held March 13 – 15, 2026, at the Waterfront Cebu City Hotel
+                                    </p>
+
+                                    <a href="lcic-soars-success-at-11th-international-travel-festival.html"
+                                        class="inline-flex items-center gap-2 text-sm font-semibold text-[#0055A6] hover:underline">
+                                        Read More
+                                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide -->
+                        <div class="px-3 wow fadeInRight" data-wow-delay="0.1s">
+                            <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+                                <img src="assets/img/news-3.webp" alt="" class="w-full h-[220px] object-cover">
+
+                                <div class="p-6">
+                                    <p class="text-xs text-slate-500 mb-2">
+                                        January 23, 2026
+                                    </p>
+
+                                    <h3 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
+                                        LCIC-CELS Becomes an Official TOEIC Testing Center
+                                    </h3>
+
+                                    <p class="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-2">
+                                        LCIC-CELS is now an official TOEIC® Testing Center, enabling on-campus
+                                        administration of the globally recognized English proficiency exam and
+                                        reinforcing its commitment to international education and career readiness.
+                                    </p>
+
+                                    <a href="lcic-cels-becomes-an-official-toeic-testing-center.html"
+                                        class="inline-flex items-center gap-2 text-sm font-semibold text-[#0055A6] hover:underline">
+                                        Read More
+                                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide -->
+                        <div class="px-3 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+                                <img src="assets/img/news-2.webp" alt="" class="w-full h-[220px] object-cover">
+
+                                <div class="p-6">
+                                    <p class="text-xs text-slate-500 mb-2">
+                                        January 23, 2026
+                                    </p>
+
+                                    <h3 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
+                                        LCIC Conducts Departmental Orientation for Second Semester A.Y. 2025-2026
+                                    </h3>
+
+                                    <p class="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-2">
+                                        LCIC conducted departmental orientations this January 2026 for Tourism
+                                        Management, Foreign Language, and Civil Engineering, strengthening academic
+                                        guidance, policy awareness, and student engagement for the second semester.
+                                    </p>
+
+                                    <a href="lcic-conducts-departmental-orientation-for-second-semester-ay-2025-2026.html"
+                                        class="inline-flex items-center gap-2 text-sm font-semibold text-[#0055A6] hover:underline">
+                                        Read More
+                                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide -->
+                        <div class="px-3 wow fadeInLeft" data-wow-delay="0.1s">
+                            <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+                                <img src="assets/img/news-1.webp" alt="" class="w-full h-[220px] object-cover">
+
+                                <div class="p-6">
+                                    <p class="text-xs text-slate-500 mb-2">
+                                        January 12, 2026
+                                    </p>
+
+                                    <h3 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
+                                        LCIC Physical Therapists Achieve 100 Percent Passing Rate, Marking a Historic
+                                        Milestone
+                                    </h3>
+
+                                    <p class="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-2">
+                                        LCIC marks a historic milestone as its first Physical Therapy graduates achieved
+                                        a 100% passing rate in the December 2025 licensure examination, reflecting the
+                                        institution’s commitment to academic excellence.
+                                    </p>
+
+                                    <a href="lcic-physical-therapists-achieve-100-percent-passing-rate-marking-a-historic-milestone.html"
+                                        class="inline-flex items-center gap-2 text-sm font-semibold text-[#0055A6] hover:underline">
+                                        Read More
+                                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View All Button -->
+                <div class="text-center mt-14">
+                    <a href="announcements.html" class="inline-flex items-center justify-center gap-3 rounded-full px-10 py-5
+                bg-[#0055A6] text-white font-semibold tracking-wide
+                shadow-md hover:bg-[#004a8f] transition text-lg">
+                        View All Announcements
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div id="program-overview" class="bg-white rounded-t-[60px] max-md:py-10">
+            <div class="max-w-7xl mx-auto py-10 md:py-20 px-6 lg:px-8 max-md:px-[15px]">
+                <div class="wow fadeInUp">
+                    <p
+                        class="asap-font font-semibold tracking-wide flex items-center gap-2  text-[#002242] mt-7 text-center justify-center text-3xl max-sm:text-[18px]">
+                        <img src="assets/img/logomark-small.webp">
+                        Academic Programs
+                    </p>
+                    <h2 data-text-key="AcademicsProgramsHeader"
+                        class="mt-3 text-[30px] sm:text-[40px] md:text-[50px] lg:text-[60px] font-extrabold leading-tight text-slate-900 tracking-[2px] leading-[80px] text-center">
+                    </h2>
+                    <p data-text-key="AcademicsProgramsDescription"
+                        class="mt-6 text-slate-600 leading-relaxed text-base text-xl max-md:text-[16px] leading-[200px] tracking-[3px]  text-center">
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-15">
+                    <article class="bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden wow fadeInUp"
+                        data-wow-delay="0s">
+                        <figure class="relative">
+                            <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat"
+                                style="background-image: url('assets/img/foriegn-language-banner.webp');">
+                                <!-- <img
+                                class="h-full w-full object-cover" 
+                                src="assets/img/foriegn-language-banner-768.webp"
+                                srcset="
+                                    assets/img/foriegn-language-banner-480.webp 480w,
+                                    assets/img/foriegn-language-banner-768.webp 768w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="BAFL"
+                                loading="lazy"
+                                decoding="async"
+                                width="768"
+                                height="480"> -->
+                            </div>
+                            <span
+                                class="asap-font absolute left-3 top-3 inline-flex items-center rounded-[5px] bg-[#4A46EE] px-2.5 py-1 text-xs font-bold text-white shadow">
+                                BAFL
+                            </span>
+                        </figure>
+                        <div class="p-5">
+                            <p class="text-[13px] font-semibold text-slate-700">
+                                Bachelor of Arts in Foreign
+                                Languages
+                            </p>
+                            <!-- <p class="asap-font text-[11px] text-[#111111] -mt-0.5"></p> -->
+                            <h3 data-text-key="AcademicCard1CourseDescription"
+                                class="mt-3 text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] font-bold leading-snug text-slate-900 md:line-clamp-2">
+                            </h3>
+                            <!-- tags -->
+                            <div class="mt-3 flex flex-wrap gap-[8px]">
+                                <span data-text-key="AcademicCard1CourseBadge1"
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-sky-50 text-sky-700 font-semibold"></span>
+                                <span data-text-key="AcademicCard1CourseBadge2"
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-sky-50 text-sky-700 font-semibold"></span>
+                                <span data-text-key="AcademicCard1CourseBadge3"
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-sky-50 text-sky-700 font-semibold"></span>
+                            </div>
+                            <!-- stats -->
+                            <div class="mt-4 grid grid-cols-2 gap-4 text-slate-700">
+                                <div>
+                                    <span data-text-key="AcademicCardDuration"
+                                        class="text-[10px] sm:text-[12px]"></span>
+                                    <span
+                                        class="asap-font text-[28px] sm:text-[20px] font-extrabold text-sky-700 leading-none align-middle">4</span>
+                                    <span data-text-key="AcademicCardYears"
+                                        class="text-[10px]  sm:text-[12px] text-sky-700"></span>
+                                </div>
+                            </div>
+                            <!-- CTA -->
+                            <a href="foreign-language.html"
+                                class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-white font-semibold shadow hover:bg-sky-800 transition">
+                                <span data-text-key="AcademicCardProgDetailsBTN"></span>
+                                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M5 12h14M13 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden wow fadeInUp"
+                        data-wow-delay="0.1s">
+                        <figure class="relative">
+                            <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat"
+                                style="background-image: url('assets/img/baels2-banner.webp');">
+                                <!-- <img 
+                                class="h-full w-full object-cover"
+                                src="assets/img/baels2-768.webp"
+                                srcset="
+                                    assets/img/baels2-480.webp 480w,
+                                    assets/img/baels2-768.webp 768w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="BAELS"
+                                loading="lazy"
+                                decoding="async"
+                                width="768"
+                                height="480"> -->
+                            </div>
+                            <span
+                                class="asap-font absolute left-3 top-3 inline-flex items-center rounded-[5px] bg-[#22C55E] px-2.5 py-1 text-xs font-bold text-white shadow">
+                                BAELS
+                            </span>
+                        </figure>
+                        <div class="p-5">
+                            <p class="text-[13px] font-semibold text-slate-700">
+                                Bachelor of Arts in English Language
+                                Studies
+                            </p>
+                            <!-- <p class="asap-font text-[11px] text-[#111111] -mt-0.5"></p> -->
+                            <h3 data-text-key="AcademicCard2CourseDescription"
+                                class="mt-3 text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] font-bold leading-snug text-slate-900 md:line-clamp-2">
+                            </h3>
+                            <div class="mt-3 flex flex-wrap gap-[8px]">
+                                <span data-text-key="AcademicCard2CourseBadge1"
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-emerald-50 text-emerald-700 font-semibold"></span>
+                                <span data-text-key="AcademicCard2CourseBadge2"
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-emerald-50 text-emerald-700 font-semibold"></span>
+                                <span data-text-key="AcademicCard2CourseBadge3"
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-emerald-50 text-emerald-700 font-semibold"></span>
+                            </div>
+                            <div class="mt-4 grid grid-cols-2 gap-4 text-slate-700">
+                                <div>
+                                    <span data-text-key="AcademicCardDuration"
+                                        class="text-[10px] sm:text-[12px]"></span>
+                                    <span
+                                        class="asap-font text-[28px] sm:text-[20px] font-extrabold text-sky-700 leading-none align-middle">4</span>
+                                    <span data-text-key="AcademicCardYears"
+                                        class="text-[10px]  sm:text-[12px] text-sky-700"></span>
+                                </div>
+                            </div>
+                            <a href="english-language-studies.html"
+                                class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-white font-semibold shadow hover:bg-sky-800 transition">
+                                <span data-text-key="AcademicCardProgDetailsBTN"></span>
+                                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M5 12h14M13 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden wow fadeInUp"
+                        data-wow-delay="0.2s">
+                        <figure class="relative">
+                            <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat"
+                                style="background-image: url('assets/img/tm-banner.webp');">
+                                <!-- <img class="h-full w-full object-cover" 
+                                src="assets/img/tm-banner.webp"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="BSTM"
+                                loading="lazy"
+                                decoding="async"
+                                width="768"
+                                height="480"> -->
+                            </div>
+                            <span
+                                class="asap-font absolute left-3 top-3 inline-flex items-center rounded-[5px] bg-[#A10046] px-2.5 py-1 text-xs font-bold text-white shadow">
+                                BSTM
+                            </span>
+                        </figure>
+                        <div class="p-5">
+                            <p class="text-[13px] font-semibold text-slate-700">
+                                Bachelor of Science in Tourism
+                                Management
+                            </p>
+                            <!-- <p class="asap-font text-[11px] text-[#111111] -mt-0.5"></p> -->
+                            <h3 data-text-key="AcademicCard3CourseDescription"
+                                class="mt-3 text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] font-bold leading-snug text-slate-900 md:line-clamp-2">
+                            </h3>
+                            <div class="mt-3 flex flex-wrap gap-[8px]">
+                                <span data-text-key="AcademicCard3CourseBadge1"
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-fuchsia-50 text-fuchsia-700 font-semibold"></span>
+                                <span data-text-key="AcademicCard3CourseBadge2"
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-fuchsia-50 text-fuchsia-700 font-semibold"></span>
+                                <span data-text-key="AcademicCard3CourseBadge3"
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-fuchsia-50 text-fuchsia-700 font-semibold"></span>
+                            </div>
+                            <div class="mt-4 grid grid-cols-2 gap-4 text-slate-700">
+                                <div>
+                                    <span data-text-key="AcademicCardDuration"
+                                        class="text-[10px] sm:text-[12px]"></span>
+                                    <span
+                                        class="asap-font text-[28px] sm:text-[20px] font-extrabold text-sky-700 leading-none align-middle">4</span>
+                                    <span data-text-key="AcademicCardYears"
+                                        class="text-[10px]  sm:text-[12px] text-sky-700"></span>
+                                </div>
+                            </div>
+                            <a href="tourism-management.html"
+                                class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-white font-semibold shadow hover:bg-sky-800 transition">
+                                <span data-text-key="AcademicCardProgDetailsBTN"></span>
+                                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M5 12h14M13 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden wow fadeInUp"
+                        data-wow-delay="0.3s">
+                        <figure class="relative">
+                            <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat"
+                                style="background-image: url('assets/img/civil-engineering-banner.webp');">
+                                <!-- <div class="aspect-[16/10] w-full overflow-hidden">
+                                <img class="h-full w-full object-cover" 
+                                src="assets/img/civil-1.webp"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="BAFL"
+                                loading="lazy"
+                                decoding="async"
+                                width="768"
+                                height="480">
+                            </div> -->
+                                <span
+                                    class="asap-font absolute left-3 top-3 inline-flex items-center rounded-[5px] bg-[#F16914] px-2.5 py-1 text-xs font-bold text-white shadow">
+                                    BSCE
+                                </span>
+                        </figure>
+                        <div class="p-5">
+                            <p class="text-[13px] font-semibold text-slate-700">
+                                Bachelor of Science in Civil
+                                Engineering
+                            </p>
+                            <!-- <p class="asap-font text-[11px] text-[#111111] -mt-0.5"></p> -->
+                            <h3 data-text-key="AcademicCard4CourseDescription"
+                                class="mt-3 text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] font-bold leading-snug text-slate-900 md:line-clamp-2">
+                            </h3>
+                            <!-- tags -->
+                            <div class="mt-3 flex flex-wrap gap-[8px]">
+                                <span data-text-key="AcademicCard4CourseBadge1"
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-sky-50 text-sky-700 font-semibold"></span>
+                                <span data-text-key="AcademicCard4CourseBadge2"
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-sky-50 text-sky-700 font-semibold"></span>
+                                <span data-text-key="AcademicCard4CourseBadge3"
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-sky-50 text-sky-700 font-semibold"></span>
+                            </div>
+                            <!-- stats -->
+                            <div class="mt-4 grid grid-cols-2 gap-4 text-slate-700">
+                                <div>
+                                    <span data-text-key="AcademicCardDuration"
+                                        class="text-[10px] sm:text-[12px]"></span>
+                                    <span
+                                        class="asap-font text-[28px] sm:text-[20px] font-extrabold text-sky-700 leading-none align-middle">4</span>
+                                    <span data-text-key="AcademicCardYears"
+                                        class="text-[10px]  sm:text-[12px] text-sky-700"></span>
+                                </div>
+                            </div>
+                            <!-- CTA -->
+                            <a href="civil-engineering.html"
+                                class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-white font-semibold shadow hover:bg-sky-800 transition">
+                                <span data-text-key="AcademicCardProgDetailsBTN"></span>
+                                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M5 12h14M13 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden wow fadeInUp"
+                        data-wow-delay="0.4s">
+                        <figure class="relative">
+                            <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat"
+                                style="background-image: url('assets/img/physical-theraphy-banner.webp');">
+                                <!-- <img 
+                                class="h-full w-full object-cover" 
+                                src="assets/img/physical-theraphy-768.webp" 
+                                srcset="
+                                    assets/img/physical-theraphy-480.webp 480w,
+                                    assets/img/physical-theraphy-768.webp 768w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="BSPT"
+                                loading="lazy"
+                                decoding="async"
+                                width="768"
+                                height="480"> -->
+                            </div>
+                            <span
+                                class="asap-font absolute left-3 top-3 inline-flex items-center rounded-[5px] bg-[#35968B] px-2.5 py-1 text-xs font-bold text-white shadow">
+                                BSPT
+                            </span>
+                        </figure>
+                        <div class="p-5">
+                            <p class="text-[13px] font-semibold text-slate-700">
+                                Bachelor of Science in Physical
+                                Therapy
+                            </p>
+                            <!-- <p class="asap-font text-[11px] text-[#111111] -mt-0.5"></p> -->
+                            <h3 data-text-key="AcademicCard5CourseDescription"
+                                class="mt-3 text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] font-bold leading-snug text-slate-900 md:line-clamp-2">
+                            </h3>
+                            <div class="mt-3 flex flex-wrap gap-[8px]">
+                                <span data-text-key="AcademicCard5CourseBadge1"
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-emerald-50 text-emerald-700 font-semibold"></span>
+                                <span data-text-key="AcademicCard5CourseBadge2"
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-emerald-50 text-emerald-700 font-semibold"></span>
+                                <span data-text-key="AcademicCard5CourseBadge3"
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-emerald-50 text-emerald-700 font-semibold"></span>
+                            </div>
+                            <div class="mt-4 grid grid-cols-2 gap-4 text-slate-700">
+                                <div>
+                                    <span data-text-key="AcademicCardDuration"
+                                        class="text-[10px] sm:text-[12px]"></span>
+                                    <span
+                                        class="asap-font text-[28px] sm:text-[20px] font-extrabold text-sky-700 leading-none align-middle">4</span>
+                                    <span data-text-key="AcademicCardYears"
+                                        class="text-[10px]  sm:text-[12px] text-sky-700"></span>
+                                </div>
+                            </div>
+                            <a href="physical-therapy.html"
+                                class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-white font-semibold shadow hover:bg-sky-800 transition">
+                                <span data-text-key="AcademicCardProgDetailsBTN"></span>
+                                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M5 12h14M13 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden wow fadeInUp"
+                        data-wow-delay="0.5s">
+                        <figure class="relative">
+                            <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat"
+                                style="background-image: url('assets/img/cels1-banner.webp');">
+                                <!-- <img 
+                                class="h-full w-full object-cover" 
+                                src="assets/img/cels1-768.webp"
+                                srcset="
+                                    assets/img/cels1-480.webp 480w,
+                                    assets/img/cels1-768.webp 768w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="BSTM"
+                                loading="lazy"
+                                decoding="async"
+                                width="768"
+                                height="480"> -->
+                            </div>
+                            <span
+                                class="asap-font absolute left-3 top-3 inline-flex items-center rounded-[5px] bg-[#4A46EE] px-2.5 py-1 text-xs font-bold text-white shadow">
+                                CELS
+                            </span>
+                        </figure>
+                        <div class="p-5">
+                            <p class="text-[13px] font-semibold text-slate-700">
+                                Center for English Language Studies
+                            </p>
+                            <!-- <p class="asap-font text-[11px] text-[#111111] -mt-0.5">
+                            </p> -->
+                            <h3 data-text-key="AcademicCard6CourseDescription"
+                                class="mt-3 text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] font-bold leading-snug text-slate-900 md:line-clamp-2">
+                            </h3>
+                            <div class="mt-3 flex flex-wrap gap-[8px]">
+                                <span data-text-key="AcademicCard6CourseBadge1"
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-fuchsia-50 text-fuchsia-700 font-semibold"></span>
+                                <span data-text-key="AcademicCard6CourseBadge2"
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-fuchsia-50 text-fuchsia-700 font-semibold"></span>
+                                <span data-text-key="AcademicCard6CourseBadge3"
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-fuchsia-50 text-fuchsia-700 font-semibold"></span>
+                            </div>
+                            <div class="mt-4 grid grid-cols-2 gap-4 text-slate-700">
+                                <div>
+                                    <span class="text-[10px] sm:text-[12px]">&nbsp;</span>
+                                    <span
+                                        class="asap-font text-[28px] sm:text-[20px] font-extrabold text-sky-700 leading-none align-middle">&nbsp;</span>
+                                    <span class="text-[10px]  sm:text-[12px] text-sky-700">&nbsp;</span>
+                                </div>
+                            </div>
+                            <a href="cels.html"
+                                class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-white font-semibold shadow hover:bg-sky-800 transition">
+                                <span data-text-key="AcademicCardProgDetailsBTN"></span>
+                                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M5 12h14M13 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="relative rounded-br-[70px] rounded-t-[60px] overflow-hidden max-sm:pb-10">
+            <img class="absolute inset-0 w-full h-full object-cover object-bottom" src="assets/img/msg-pres-1600.webp"
+                srcset="
+                        assets/img/msg-pres-640.webp 640w,
+                        assets/img/msg-pres-768.webp 768w,
+                        assets/img/msg-pres-1024.webp 1024w,
+                        assets/img/msg-pres-1600.webp 1600w
+                    " sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw" alt="Message from President"
+                loading="lazy" decoding="async" width="1600" height="900">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#DFEFFF] to-[#ffffff4D]"></div>
+            <div class="max-w-7xl mx-auto px-6 py-20 py-30 max-md:px-[15px] max-md:pt-[25px]">
+                <article class="rounded-[28px] border border-slate-200 border-white shadow-md bg-transparent">
+                    <div class="grid md:grid-cols-2 md:flex-row">
+                        <!-- Text -->
+                        <div class="order-1 max-md:order-2 wow fadeInLeft">
+                            <h2 data-text-key="PresidentMessageTitle"
+                                class=" text-[18px] sm:text-[38px] font-extrabold text-slate-900 max-md:pt-5">
+                            </h2>
+                            <div class="mt-5 rounded-2xl md:order-2 p-5 [@media(max-width:414px)]:p-0">
+                                <p
+                                    class="mt-3 text-[14px] sm:text-[15px] md:text-[16px] leading-7 text-[#001121] xl:tracking-[1px] text-left">
+                                    Welcome to Lapulapu-Cebu International College.<br><br>
+                                    At Lapulapu-Cebu International College, we believe that education must go
+                                    beyond graduation—it must empower individuals to become globally competent,
+                                    professionally prepared, and culturally grounded citizens of the world. Our
+                                    institution was established with a clear vision: to deliver quality education
+                                    anchored in foreign language proficiency, international exposure, and industry
+                                    relevance.
+                                    <br><br>
+                                    We take pride in offering programs that are responsive to the evolving demands
+                                    of the global workforce, while fostering a learning environment that upholds
+                                    discipline, integrity, and excellence. Our commitment is to open pathways for our
+                                    students—both locally and internationally—by equipping them with the
+                                    knowledge, skills, and values necessary to thrive in an increasingly
+                                    interconnected and dynamic world.
+                                    <br><br>
+                                    As President, I am dedicated to strengthening partnerships across borders,
+                                    enhancing the quality of our academic programs, and ensuring that every LCIC
+                                    graduate receives an education that is practical, relevant, and transformative.
+                                    <br><br>
+                                    We are not merely building an institution—we are shaping futures, expanding
+                                    opportunities, and nurturing globally minded leaders.
+                                </p>
+                            </div>
+                            <div class="mt-6 max-md:mx-auto max-md:w-fit max-md:text-center">
+                                <p
+                                    class="asap-font text-[18px] sm:text-[24px] md:text-[24px] font-bold text-slate-900 tracking-[1px] text-center text-[#001121]">
+                                    Prof. Ethel Agnes P. Valenzuela, EdD, CESO IV</p>
+                                <p class="text-[16px] text-[#001121] text-center pt-2">President of Lapulapu-Cebu
+                                    International College</p>
+                            </div>
+                        </div>
+                        <!-- Photo -->
+                        <div class="order-2 max-md:order-1 wow fadeInRight">
+                            <div
+                                class="mx-auto mt-25 max-w-md max-md:w-full max-md:max-w-full max-sm:h-[389px] overflow-hidden rounded-[22px] ring-1 ring-slate-200 w-[480px] h-[713px] mr-[20px]">
+                                <img src="assets/img/prof-ethel-msg.webp" alt="President"
+                                    class="h-full w-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <article
+                        class="wow fadeInUp mt-8 rounded-[24px] bg-transparent ring-2 ring-slate-200 text-center p-6 md:p-10 bg-white/30 mx-[55px] mb-[55px] relative max-sm:mx-[15px]">
+                        <p data-text-key="FrameTitle" class="text-[20px] font-semibold tracking-wide text-[#001121]">
+                        </p>
+                        <p data-text-key="FramePhrase"
+                            class="mx-auto mt-2 text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-10 text-slate-700 tracking-[3px]">
+                        </p>
+                        <a href="#program-overview"
+                            class="mt-6 inline-flex items-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-white shadow hover:bg-sky-800 transition tracking-[3px]">
+                            <span data-text-key="AcademicCardProgDetailsBTN"></span>
+                            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M13 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                        <img src="assets/img/gradient-ball.webp" class="absolute -right-45 -top-10 max-md:hidden">
+                    </article> -->
+                </article>
+            </div>
+        </div>
+        <section class="bg-[#DFEFFF] py-4">
+            <!-- container: no side padding on mobile, add on md+ -->
+            <div class="max-w-7xl mx-auto px-0 md:px-4 overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                    <!-- MAP -->
+                    <div class="overflow-hidden ring-1 ring-slate-200
+                    h-72 sm:h-80 md:h-[420px] lg:h-screen
+                    rounded-none md:rounded-2xl lg:rounded-r-2xl
+                    lg:w-[48vw] lg:-ml-[calc(50vw-105%)] max-md:px-[15px] wow fadeInLeft
+                    [@media(max-width:1024px)_and_(max-height:768px)]:h-full">
+                        <iframe class="block w-full h-full" style="border:0" loading="lazy" allowfullscreen
+                            referrerpolicy="no-referrer-when-downgrade"
+                            src="https://www.google.com/maps?q=Lapu-Lapu+Cebu+International+College&output=embed"></iframe>
+                    </div>
+                    <!-- RIGHT PANEL -->
+                    <div class="px-4 md:px-0 py-6 md:p-8 wow fadeInRight">
+                        <!-- Header -->
+                        <p
+                            class="asap-font font-semibold tracking-wide flex items-center gap-2  text-[#002242] text-3xl max-sm:text-[18px]">
+                            <img src="assets/img/logomark-small.webp" alt="" class="h-6 w-6">
+                            Contact
+                        </p>
+                        <h2 data-text-key="ContactUs"
+                            class="mt-2 text-[30px] sm:text-[40px] md:text-[50px] lg:text-[60px] font-extrabold text-slate-900 mb-6 md:mb-10">
+                        </h2>
+                        <!-- Contact list -->
+                        <ul class="space-y-3 md:space-y-4">
+                            <li
+                                class="flex items-center gap-3 rounded-[10px] ring-1 ring-slate-200 bg-white p-3 max-sm:block">
+                                <span
+                                    class="grid h-9 w-9 place-items-center rounded-full bg-sky-100 max-sm:float-left max-sm:mr-[15px]">
+                                    <img src="assets/img/map.webp" alt="">
+                                </span>
+                                <div class="flex-1 min-w-0">
+                                    <p data-text-key="ContactUsAccessInfoHeader"
+                                        class="text-sm font-semibold text-slate-900"></p>
+                                    <p class="asap-font text-xs text-slate-500 truncate">
+                                        Ticgahon 1 Road, Bankal, Lapu-Lapu City Cebu, 6015 Philippines
+                                    </p>
+                                </div>
+                                <a data-text-key="ContactUsViewMapBTN"
+                                    href="https://maps.google.com/?q=Lapu-Lapu+Cebu+International+College"
+                                    target="_blank"
+                                    class="shrink-0 rounded-full bg-[#0055A6] px-4 py-2 text-white text-xs sm:text-sm font-semibold w-[140px] text-center max-sm:block max-sm:mt-[10px] max-sm:ml-[50px]"></a>
+                            </li>
+                            <li
+                                class="flex items-center gap-3 rounded-[10px] ring-1 ring-slate-200 bg-white p-3 max-sm:block">
+                                <span
+                                    class="grid h-9 w-9 place-items-center rounded-full bg-sky-100 max-sm:float-left max-sm:mr-[15px]">
+                                    <img src="assets/img/phone.webp" alt="">
+                                </span>
+                                <div class="flex-1 min-w-0">
+                                    <p data-text-key="ContactUs" class="text-sm font-semibold text-slate-900"></p>
+                                    <p data-text-key="ContactUsMainOffice" class="asap-font text-xs text-slate-500"></p>
+                                </div>
+                                <a data-text-key="MakeACall" href="tel:+639177062124"
+                                    class="shrink-0 rounded-full bg-[#0055A6] px-4 py-2 text-white text-xs sm:text-sm font-semibold w-[140px] text-center max-sm:block max-sm:mt-[10px] max-sm:ml-[50px]"></a>
+                            </li>
+                            <li
+                                class="flex items-center gap-3 rounded-[10px] ring-1 ring-slate-200 bg-white p-3 max-sm:block">
+                                <span
+                                    class="grid h-9 w-9 place-items-center rounded-full bg-sky-100 max-sm:float-left max-sm:mr-[15px]">
+                                    <img src="assets/img/email.webp" alt="">
+                                </span>
+                                <div class="flex-1 min-w-0">
+                                    <p data-text-key="ContactUsByEmail" class="text-sm font-semibold text-slate-900">
+                                    </p>
+                                    <p class="asap-font text-xs text-slate-500">information@lcic.edu.ph</p>
+                                </div>
+                                <a data-text-key="SendAnEmail" href="mailto:information@lcic.edu.ph"
+                                    class="shrink-0 rounded-full bg-[#0055A6] px-4 py-2 text-white text-xs sm:text-sm font-semibold w-[140px] text-center max-sm:block max-sm:mt-[10px] max-sm:ml-[50px]"></a>
+                            </li>
+                            <li
+                                class="flex items-center gap-3 rounded-[10px] ring-1 ring-slate-200 bg-white p-3 max-sm:block">
+                                <span
+                                    class="grid h-9 w-9 place-items-center rounded-full bg-sky-100 max-sm:float-left max-sm:mr-[15px]">
+                                    <img src="assets/img/clock.webp" alt="">
+                                </span>
+                                <div class="flex-1 min-w-0">
+                                    <p data-text-key="OfficeHoursHead" class="text-sm font-semibold text-slate-900"></p>
+                                    <p data-text-key="OfficeHours" class="text-xs text-slate-500"></p>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- Access -->
+                        <h3 data-text-key="HowToAccessHeader"
+                            class="mt-8 text-base text-[24px] font-extrabold text-slate-900"></h3>
+                        <ul class="mt-3 space-y-3">
+                            <li class="flex items-center rounded-[10px] ring-1 ring-slate-200 bg-white px-4 py-3">
+                                <span class="grid h-9 w-9 place-items-center rounded-full bg-sky-100">
+                                    <img src="assets/img/bus.webp" alt="">
+                                </span>
+                                <div class="flex-1 min-w-0 pl-3">
+                                    <p class="text-sm font-semibold text-slate-900">From Mactan-Cebu International
+                                        Airport</p>
+                                    <p data-text-key="AccessDetailsCard1MethodInfo" class="text-xs text-slate-500"></p>
+                                </div>
+                                <span data-text-key="AccessDetailsCard1Time"
+                                    class="text-[#0055A6] text-sm md:text-base font-semibold"></span>
+                            </li>
+                            <li class="flex items-center rounded-[10px] ring-1 ring-slate-200 bg-white px-4 py-3">
+                                <span class="grid h-9 w-9 place-items-center rounded-full bg-sky-100">
+                                    <img src="assets/img/car.webp" alt="">
+                                </span>
+                                <div class="flex-1 min-w-0 pl-3">
+                                    <p data-text-key="AccessDetailsCard2Header"
+                                        class="text-sm font-semibold text-slate-900"></p>
+                                    <p data-text-key="AccessDetailsCard2MethodInfo" class="text-xs text-slate-500"></p>
+                                </div>
+                                <span data-text-key="AccessDetailsCard2Time"
+                                    class="text-[#0055A6] text-sm md:text-base font-semibold"></span>
+                            </li>
+                            <li class="flex items-center rounded-[10px] ring-1 ring-slate-200 bg-white px-4 py-3">
+                                <span class="grid h-9 w-9 place-items-center rounded-full bg-sky-100">
+                                    <img src="assets/img/plain.webp" alt="">
+                                </span>
+                                <div class="flex-1 min-w-0 pl-3">
+                                    <p data-text-key="AccessDetailsCard3Header"
+                                        class="text-sm font-semibold text-slate-900"></p>
+                                    <p data-text-key="AccessDetailsCard3MethodInfo" class="text-xs text-slate-500"></p>
+                                </div>
+                                <span data-text-key="AccessDetailsCard3Time"
+                                    class="text-[#0055A6] text-sm md:text-base font-semibold"></span>
+                            </li>
+                        </ul>
+                        <a data-text-key="ViewDetailedInfo" href="get-in-touch.html"
+                            class="mt-4 inline-flex items-center text-[14px] justify-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-white font-semibold hover:bg-sky-800"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="w-full bg-[#A6CAED] relative overflow-hidden pb-25">
+            <img src="assets/img/Logomark2.webp" class="absolute top-0-left-15">
+            <img src="assets/img/Logomark3.webp" class="absolute bottom-0 -right-15">
+            <div class="max-w-7xl mx-auto px-2 lg:px-4 py-30 relative z-1 max-md:px-[15px] wow fadeInUp">
+                <div class="text-center">
+                    <h2 data-text-key="AdmissionTitle"
+                        class="mt-2 text-[30px] sm:text-[40px] md:text-[50px] lg:text-[60px] font-extrabold text-slate-900 mb-5">
+                    </h2>
+                    <p data-text-key="AdmissionPhrase"
+                        class="text-center text-[20px] sm:text-[22px] md:text-[23px] lg:text-[24px] text-[#111111]  font-semibold tracking-[2px]">
+                    </p>
+                    <div class="relative mx-auto w-fit mt-8 max-sm:w-full">
+                        <div
+                            class="flex items-center gap-6 align-middle items-center justify-center p-8 max-sm:block max-sm:p-0">
+                            <a href="#program-overview"
+                                class="w-full text-center rounded-full bg-[#0055A6] px-6 py-4 text-white font-semibold text-[16px] sm:text-[20px] shadow-sm hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 max-sm:block max-sm:mb-5">
+                                <span data-text-key="CTABTN1"></span>
+                            </a>
+                            <a href="https://lcic.sandbox-chrono.com/login"
+                                class="w-full text-center rounded-full bg-white px-6 py-4 font-semibold text-[#0055A6] text-[16px] sm:text-[20px] shadow-sm ring-1 ring-blue-200 hover:ring-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-600 max-sm:block focus:ring-offset-2">
+                                <span data-text-key="CTABTN2"></span>
+                            </a>
+                        </div>
+                        <div
+                            class="absolute -right-30 top-[50%] transform-[translateY(-50%)] max-md:top-[150%] max-md:right-[-10%] max-sm:right-[5%]">
+                            <div
+                                class="flex h-[90px] w-[90px] sm:h-[120px] sm:w-[120px] items-center justify-center rounded-full bg-[#0055A6] text-center text-white text-xs sm:text-sm leading-tight">
+                                <span data-text-key="BubbleReservation"></span>
+                            </div>
+                            <span
+                                class="absolute left-[-14px] top-1/2 -translate-y-1/2 h-0 w-4
+                                    border-y-[10px] border-y-transparent border-r-[14px] border-[#0055A6] max-md:top-[15%] max-md:left-[5%] max-md:rotate-45"
+                                aria-hidden="true"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="relative -mt-15 bg-[#0055A6] text-white rounded-t-[40px] overflow-hidden">
+        <div class="mx-auto max-w-7xl px-6 py-12 lg:py-20">
+            <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-12">
+                <div class="order-1 lg:order-2 lg:col-span-3">
+                    <h3 data-text-key="QuikLinks" class="mb-4 font-semibold tracking-wide text-[20px]"></h3>
+                    <ul class="space-y-3 text-white/90 text-[16px]">
+                        <li>
+                            <a href="careers.html" class="hover:text-white">Careers</a>
+                        </li>
+                        <li>
+                            <a href="at-a-glance.html" class="hover:text-white">At A Glance</a>
+                        </li>
+                        <li>
+                            <a href="virtual-visit.html" class="hover:text-white">Virtual Visit</a>
+                        </li>
+                        <li>
+                            <a href="get-in-touch.html" class="hover:text-white">Get In Touch</a>
+                        </li>
+                        <li>
+                            <a href="success-roadmap.html" class="hover:text-white">Success Roadmap</a>
+                        </li>
+                        <li>
+                            <a href="network-and-linkages.html" class="hover:text-white">Network and Linkages</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-2 lg:order-3 lg:col-span-3">
+                    <h3 data-text-key="ForStudents&Faculty" class="mb-4 font-semibold tracking-wide text-[20px]"></h3>
+                    <ul class="space-y-3 text-white/90 text-[16px]">
+                        <li>
+                            <a href="campus-facilities.html" class="hover:text-white">Facilities</a>
+                        </li>
+                        <li>
+                            <a href="dormitory.html" class="hover:text-white">Dormitory</a>
+                        </li>
+                        <li>
+                            <a href="admission-process.html" class="hover:text-white">Admission Process</a>
+                        </li>
+                        <li>
+                            <a href="alumni-and-placement.html" class="hover:text-white">Alumni And Placement</a>
+                        </li>
+                        <li>
+                            <a href="admission-requirements.html" class="hover:text-white">Admission Requirements</a>
+                        </li>
+                        <li>
+                            <a href="scholarship-financial-aid.html" class="hover:text-white">Scholarship And
+                                Financial Aids</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-3 lg:order-4 lg:col-span-3">
+                    <h3 data-text-key="ContactUs" class="mb-4 font-semibold tracking-wide text-[20px]"></h3>
+                    <ul class="space-y-3 text-white/90  text-[14px]">
+                        <li class="flex gap-3">
+                            <svg class="mt-1 h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" />
+                            </svg>
+                            <span>
+                                Ticgahon 1 Road, Bankal, Lapu-Lapu City Cebu, 6015 Philippines
+                            </span>
+                        </li>
+                        <li class="flex gap-3">
+                            <svg class="mt-1 h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.1.37 2.29.57 3.5.57a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1C11.3 21.82 2.18 12.7 2.18 1.99a1 1 0 0 1 1-1H6.7a1 1 0 0 1 1 1c0 1.21.2 2.4.57 3.5a1 1 0 0 1-.25 1.01l-2.2 2.2Z" />
+                            </svg>
+                            <span>+63 917 7062 124</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <svg class="mt-1 h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z" />
+                            </svg>
+                            <a href="mailto:information@lcic.edu.ph"
+                                class="hover:text-white">information@lcic.edu.ph</a>
+                        </li>
+                    </ul>
+                    <!-- <div class="mt-8">
+                        <h4 data-text-key="Newsletter" class="mb-3 font-semibold tracking-wide text-[20px]">Newsletter
+                        </h4>
+                        <form id="newsletterForm" class="max-w-md">
+                            <div
+                                class="flex overflow-hidden rounded-md ring-1 ring-white/30 focus-within:ring-white/60">
+                                <input type="email" id="email" name="email" data-text-key="EmailAddress"
+                                    placeholder="Email Address"
+                                    class="w-0 grow bg-white/10 px-4 py-2 text-white placeholder-white/70 outline-none"
+                                    required>
+                                <button data-text-key="Register" type="submit"
+                                    class="bg-white px-4 py-2 text-sm font-semibold text-[#0055A6] hover:bg-sky-50">Register</button>
+                            </div>
+                        </form>
+                        <p id="message" class="mt-2 text-white"></p>
+                    </div> -->
+                    <!-- <div class="mt-8">
+                        <h4 class="mb-3 font-semibold tracking-wide text-[20px]">
+                            Newsletter
+                        </h4>
+
+                        <form action="https://gmail.us17.list-manage.com/subscribe/post?u=a9f0cf1ef7fa91887cb364719&amp;id=ae614dda64&amp;f_id=00b997e2f0" method="POST" target="_blank"
+                            class="max-w-md">
+                            <div
+                                class="flex overflow-hidden rounded-md ring-1 ring-white/30 focus-within:ring-white/60">
+
+                                <input type="email" name="EMAIL" placeholder="Email Address" required
+                                    class="w-0 grow bg-white/10 px-4 py-2 text-white placeholder-white/70 outline-none">
+
+                                <button type="submit"
+                                    class="bg-white px-4 py-2 text-sm font-semibold text-[#0055A6] hover:bg-sky-50">
+                                    Register
+                                </button>
+                            </div>
+                        </form>
+                    </div> -->
+                </div>
+                <div class="order-5 lg:order-1 lg:col-span-3">
+                    <div class="flex items-start gap-4">
+                        <a href="index.html">
+                            <img src="assets/img/brand-logo-white.webp" alt="FooterLogo">
+                        </a>
+                    </div>
+                    <p data-text-key="LCICDescription" class="text-[12px] mt-5"></p>
+                    <div class="mt-6 flex gap-3">
+                        <a href="https://www.facebook.com/LapulapuCebuInternationalCollege" aria-label="Facebook"
+                            class="grid h-10 w-10 place-items-center rounded-md bg-white/20 hover:bg-white/30">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.5V12h2.5V9.7c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.4H15c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/lcic_official.ph/?hl=en" aria-label="Instagram"
+                            class="grid h-10 w-10 place-items-center rounded-md bg-white/20 hover:bg-white/30">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11Zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.75-.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@lapulapucebuinternationalc9876" aria-label="YouTube"
+                            class="grid h-10 w-10 place-items-center rounded-md bg-white/20 hover:bg-white/30">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.5 7.2a3 3 0 0 0-2.1-2.1C19.3 4.5 12 4.5 12 4.5s-7.2 0-9.4.6A3 3 0 0 0 .5 7.2C0 9.4 0 12 0 12s0 2.6.5 4.8a3 3 0 0 0 2.1 2.1c2.2.6 9.4.6 9.4.6s7.2 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 14.6 24 12 24 12s0-2.6-.5-4.8ZM9.6 15.5v-7l6.3 3.5-6.3 3.5Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10 border-t border-white/10 pt-6">
+                <div class="flex flex-col-reverse items-start gap-4 lg:flex-row lg:items-center lg:justify-between">
+                    <p data-text-key="AllRightReserved" class="text-xs text-white/80"></p>
+                    <ul class="flex flex-wrap gap-x-8 gap-y-2 text-sm text-white/80">
+                        <li>
+                            <a data-text-key="PrivacyPolicy" href="privacy-policy.html" class="hover:text-white"></a>
+                        </li>
+                        <li>
+                            <a data-text-key="Sitemap" href="sitemap.html" class="hover:text-white"></a>
+                        </li>
+                        <li>
+                            <a data-text-key="Accessibility" href="accessibilty.html" class="hover:text-white"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+</body>
+
+</html>
