@@ -5,7 +5,7 @@
     <title>LCIC</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="site-base" content="https://demo.chronostep.com//develop/new-lcic/">
+    <meta name="site-base" content="https://lcic.edu.ph/">
     <script src="assets/js/tailwind-browser.js"></script>
     <script src="assets/js/language-handler.js" defer></script>
     <script src="assets/js/translation.js"></script>
@@ -15,16 +15,36 @@
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="preload" as="image" href="assets/img/banner-img-cropped.webp">
 
 <body class="text-en" data-transparent-header="true">
     <section class="relative min-h-screen overflow-hidden">
-        <!-- <div class="relative pr-0 2xl:pr-[95px]"> -->
         <div class="absolute inset-0 pr-0 2xl:pr-[95px]">
+  
+        <div class="relative w-full h-full rounded-br-[70px] overflow-hidden">
+
+              <img 
+                    src="assets/img/banner-img-cropped.webp"
+                    alt="Banner"
+                    width="1920"
+                    height="1080"
+                    fetchpriority="high"
+                    loading="eager"
+                    decoding="async"
+                    class="w-full h-full object-cover"
+                />
+            <div class="absolute inset-0 bg-[#2222228D]"></div>
+
+        </div>
+
+        </div>
+        <!-- <div class="relative pr-0 2xl:pr-[95px]"> -->
+        <!-- <div class="absolute inset-0 pr-0 2xl:pr-[95px]">
             <div class="w-full h-full 
             bg-[linear-gradient(#2222228D,_#2222228D),url('assets/img/banner-img-cropped.webp')] 
             bg-cover bg-center rounded-br-[70px]">
             </div>
-        </div>
+        </div> -->
         <!-- <div
                 class="w-full absolute inset-0 
         bg-[linear-gradient(#2222228D,_#2222228D),url('assets/img/banner-img-cropped.webp')] 
@@ -649,8 +669,16 @@
                             <!-- 16:9 Video Wrapper -->
                             <div
                                 class="w-full pb-[56.25%] overflow-hidden lg:after:content-[''] lg:after:absolute lg:after:h-[100%] lg:after:-bottom-[80px] lg:after:-right-[127px] lg:after:-z-10 lg:after:bg-no-repeat lg:after:bg-[url('assets/img/video.svg')]">
-                                <video class="absolute inset-0 w-full h-full object-cover z-10" autoplay loop
-                                    playsinline muted controls>
+                                  <video
+                                    class="absolute inset-0 w-full h-full object-cover z-10"
+                                    autoplay
+                                    loop
+                                    muted
+                                    playsinline
+                                    controls
+                                    preload="metadata"
+                                    poster="assets/img/video-poster.webp"
+                                >
                                     <source src="assets/img/vid.mp4" type="video/mp4" />
                                 </video>
                             </div>
@@ -750,7 +778,16 @@
                         <!-- Slide -->
                         <div class="px-3 wow fadeInRight" data-wow-delay="0.1s">
                             <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                                <img src="assets/img/news-10.webp" alt="" class="w-full h-[220px] object-cover">
+                                <img 
+                                src="assets/img/news-10.webp"
+                                alt="News article thumbnail"
+                                width="400"
+                                height="220"
+                                loading="lazy"
+                                decoding="async"
+                                class="w-full h-[220px] object-cover"
+                                />
+                                <!-- <img src="assets/img/news-10.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
@@ -780,7 +817,16 @@
                         <!-- Slide -->
                         <div class="px-3 wow fadeInRight" data-wow-delay="0.1s">
                             <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                                <img src="assets/img/news-7.webp" alt="" class="w-full h-[220px] object-cover">
+                                <img 
+                                src="assets/img/news-7.webp"
+                                alt="News article thumbnail"
+                                width="400"
+                                height="220"
+                                loading="lazy"
+                                decoding="async"
+                                class="w-full h-[220px] object-cover"
+                                />
+                                <!-- <img src="assets/img/news-7.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
@@ -814,7 +860,16 @@
                         <!-- Slide -->
                         <div class="px-3 wow fadeInRight" data-wow-delay="0.1s">
                             <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                                <img src="assets/img/news-8.webp" alt="" class="w-full h-[220px] object-cover">
+                                <img 
+                                src="assets/img/news-8.webp"
+                                alt="News article thumbnail"
+                                width="400"
+                                height="220"
+                                loading="lazy"
+                                decoding="async"
+                                class="w-full h-[220px] object-cover"
+                                />
+                                <!-- <img src="assets/img/news-8.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
@@ -844,7 +899,16 @@
                         <!-- Slide -->
                         <div class="px-3 wow fadeInRight" data-wow-delay="0.1s">
                             <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                                <img src="assets/img/news-9.webp" alt="" class="w-full h-[220px] object-cover">
+                                <img 
+                                src="assets/img/news-9.webp"
+                                alt="News article thumbnail"
+                                width="400"
+                                height="220"
+                                loading="lazy"
+                                decoding="async"
+                                class="w-full h-[220px] object-cover"
+                                />
+                                <!-- <img src="assets/img/news-9.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
@@ -878,7 +942,16 @@
                         <!-- Slide -->
                         <div class="px-3 wow fadeInRight" data-wow-delay="0.1s">
                             <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                                <img src="assets/img/news-6.webp" alt="" class="w-full h-[220px] object-cover">
+                                <img 
+                                src="assets/img/news-6.webp"
+                                alt="News article thumbnail"
+                                width="400"
+                                height="220"
+                                loading="lazy"
+                                decoding="async"
+                                class="w-full h-[220px] object-cover"
+                                />
+                                <!-- <img src="assets/img/news-6.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
@@ -909,7 +982,16 @@
                         <!-- Slide -->
                         <div class="px-3 wow fadeInRight" data-wow-delay="0.1s">
                             <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                                <img src="assets/img/news-4.webp" alt="" class="w-full h-[220px] object-cover">
+                                <img 
+                                src="assets/img/news-4.webp"
+                                alt="News article thumbnail"
+                                width="400"
+                                height="220"
+                                loading="lazy"
+                                decoding="async"
+                                class="w-full h-[220px] object-cover"
+                                />
+                                <!-- <img src="assets/img/news-4.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
@@ -939,7 +1021,16 @@
                         <!-- Slide -->
                         <div class="px-3 wow fadeInRight" data-wow-delay="0.1s">
                             <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                                <img src="assets/img/news-5.webp" alt="" class="w-full h-[220px] object-cover">
+                                <img 
+                                src="assets/img/news-5.webp"
+                                alt="News article thumbnail"
+                                width="400"
+                                height="220"
+                                loading="lazy"
+                                decoding="async"
+                                class="w-full h-[220px] object-cover"
+                                />
+                                <!-- <img src="assets/img/news-5.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
@@ -969,7 +1060,16 @@
                         <!-- Slide -->
                         <div class="px-3 wow fadeInRight" data-wow-delay="0.1s">
                             <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                                <img src="assets/img/news-3.webp" alt="" class="w-full h-[220px] object-cover">
+                                <img 
+                                src="assets/img/news-3.webp"
+                                alt="News article thumbnail"
+                                width="400"
+                                height="220"
+                                loading="lazy"
+                                decoding="async"
+                                class="w-full h-[220px] object-cover"
+                                />
+                                <!-- <img src="assets/img/news-3.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
@@ -998,7 +1098,16 @@
                         <!-- Slide -->
                         <div class="px-3 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                                <img src="assets/img/news-2.webp" alt="" class="w-full h-[220px] object-cover">
+                                <img 
+                                src="assets/img/news-2.webp"
+                                alt="News article thumbnail"
+                                width="400"
+                                height="220"
+                                loading="lazy"
+                                decoding="async"
+                                class="w-full h-[220px] object-cover"
+                                />
+                                <!-- <img src="assets/img/news-2.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
@@ -1027,7 +1136,16 @@
                         <!-- Slide -->
                         <div class="px-3 wow fadeInLeft" data-wow-delay="0.1s">
                             <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                                <img src="assets/img/news-1.webp" alt="" class="w-full h-[220px] object-cover">
+                                <img 
+                                src="assets/img/news-1.webp"
+                                alt="News article thumbnail"
+                                width="400"
+                                height="220"
+                                loading="lazy"
+                                decoding="async"
+                                class="w-full h-[220px] object-cover"
+                                />
+                                <!-- <img src="assets/img/news-1.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
@@ -1087,20 +1205,16 @@
                     <article class="bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden wow fadeInUp"
                         data-wow-delay="0s">
                         <figure class="relative">
-                            <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat"
-                                style="background-image: url('assets/img/foriegn-language-banner.webp');">
-                                <!-- <img
+                            <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat">
+                                <!-- style="background-image: url('assets/img/foriegn-language-banner.webp');"> -->
+                                <img
                                 class="h-full w-full object-cover" 
-                                src="assets/img/foriegn-language-banner-768.webp"
-                                srcset="
-                                    assets/img/foriegn-language-banner-480.webp 480w,
-                                    assets/img/foriegn-language-banner-768.webp 768w"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                src="assets/img/foriegn-language-banner.webp"
                                 alt="BAFL"
                                 loading="lazy"
                                 decoding="async"
                                 width="768"
-                                height="480"> -->
+                                height="480">
                             </div>
                             <span
                                 class="asap-font absolute left-3 top-3 inline-flex items-center rounded-[5px] bg-[#4A46EE] px-2.5 py-1 text-xs font-bold text-white shadow">
@@ -1150,20 +1264,16 @@
                     <article class="bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden wow fadeInUp"
                         data-wow-delay="0.1s">
                         <figure class="relative">
-                            <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat"
-                                style="background-image: url('assets/img/baels2-banner.webp');">
-                                <!-- <img 
+                            <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat">
+                                <!-- style="background-image: url('assets/img/baels2-banner.webp');"> -->
+                                <img 
                                 class="h-full w-full object-cover"
-                                src="assets/img/baels2-768.webp"
-                                srcset="
-                                    assets/img/baels2-480.webp 480w,
-                                    assets/img/baels2-768.webp 768w"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                src="assets/img/baels2-banner.webp"
                                 alt="BAELS"
                                 loading="lazy"
                                 decoding="async"
                                 width="768"
-                                height="480"> -->
+                                height="480">
                             </div>
                             <span
                                 class="asap-font absolute left-3 top-3 inline-flex items-center rounded-[5px] bg-[#22C55E] px-2.5 py-1 text-xs font-bold text-white shadow">
@@ -1210,16 +1320,15 @@
                     <article class="bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden wow fadeInUp"
                         data-wow-delay="0.2s">
                         <figure class="relative">
-                            <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat"
-                                style="background-image: url('assets/img/tm-banner.webp');">
-                                <!-- <img class="h-full w-full object-cover" 
+                            <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat">
+                                <!-- style="background-image: url('assets/img/tm-banner.webp');"> -->
+                                <img class="h-full w-full object-cover" 
                                 src="assets/img/tm-banner.webp"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 alt="BSTM"
                                 loading="lazy"
                                 decoding="async"
                                 width="768"
-                                height="480"> -->
+                                height="480">
                             </div>
                             <span
                                 class="asap-font absolute left-3 top-3 inline-flex items-center rounded-[5px] bg-[#A10046] px-2.5 py-1 text-xs font-bold text-white shadow">
@@ -1266,18 +1375,15 @@
                     <article class="bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden wow fadeInUp"
                         data-wow-delay="0.3s">
                         <figure class="relative">
-                            <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat"
-                                style="background-image: url('assets/img/civil-engineering-banner.webp');">
-                                <!-- <div class="aspect-[16/10] w-full overflow-hidden">
+                            <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat">
+                                <!-- style="background-image: url('assets/img/civil-engineering-banner.webp');"> -->
                                 <img class="h-full w-full object-cover" 
-                                src="assets/img/civil-1.webp"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                src="assets/img/civil-engineering-banner.webp"
                                 alt="BAFL"
                                 loading="lazy"
                                 decoding="async"
                                 width="768"
                                 height="480">
-                            </div> -->
                                 <span
                                     class="asap-font absolute left-3 top-3 inline-flex items-center rounded-[5px] bg-[#F16914] px-2.5 py-1 text-xs font-bold text-white shadow">
                                     BSCE
@@ -1326,20 +1432,16 @@
                     <article class="bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden wow fadeInUp"
                         data-wow-delay="0.4s">
                         <figure class="relative">
-                            <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat"
-                                style="background-image: url('assets/img/physical-theraphy-banner.webp');">
-                                <!-- <img 
+                            <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat">
+                                <!-- style="background-image: url('assets/img/physical-theraphy-banner.webp');"> -->
+                                <img 
                                 class="h-full w-full object-cover" 
-                                src="assets/img/physical-theraphy-768.webp" 
-                                srcset="
-                                    assets/img/physical-theraphy-480.webp 480w,
-                                    assets/img/physical-theraphy-768.webp 768w"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                src="assets/img/physical-theraphy-banner.webp" 
                                 alt="BSPT"
                                 loading="lazy"
                                 decoding="async"
                                 width="768"
-                                height="480"> -->
+                                height="480">
                             </div>
                             <span
                                 class="asap-font absolute left-3 top-3 inline-flex items-center rounded-[5px] bg-[#35968B] px-2.5 py-1 text-xs font-bold text-white shadow">
@@ -1386,20 +1488,16 @@
                     <article class="bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 overflow-hidden wow fadeInUp"
                         data-wow-delay="0.5s">
                         <figure class="relative">
-                            <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat"
-                                style="background-image: url('assets/img/cels1-banner.webp');">
-                                <!-- <img 
+                            <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat">
+                                <!-- style="background-image: url('assets/img/cels1-banner.webp');"> -->
+                                <img 
                                 class="h-full w-full object-cover" 
-                                src="assets/img/cels1-768.webp"
-                                srcset="
-                                    assets/img/cels1-480.webp 480w,
-                                    assets/img/cels1-768.webp 768w"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                src="assets/img/cels1-banner.webp"
                                 alt="BSTM"
                                 loading="lazy"
                                 decoding="async"
                                 width="768"
-                                height="480"> -->
+                                height="480">
                             </div>
                             <span
                                 class="asap-font absolute left-3 top-3 inline-flex items-center rounded-[5px] bg-[#4A46EE] px-2.5 py-1 text-xs font-bold text-white shadow">
@@ -1863,6 +1961,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/wow.min.js"></script>
+    <script>
+    window.addEventListener("load", () => {
+    const video = document.getElementById("video");
+    const source = video.querySelector("source");
+
+    source.src = source.dataset.src;
+
+    video.load();
+
+    video.addEventListener("loadeddata", () => {
+        video.play().catch(() => {});
+    });
+    });
+    </script>
 </body>
 
 </html>
