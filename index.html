@@ -668,19 +668,20 @@
                         <div class="w-full xl:w-12/12 relative">
                             <!-- 16:9 Video Wrapper -->
                             <div
-                                class="w-full pb-[56.25%] overflow-hidden lg:after:content-[''] lg:after:absolute lg:after:h-[100%] lg:after:-bottom-[80px] lg:after:-right-[127px] lg:after:-z-10 lg:after:bg-no-repeat lg:after:bg-[url('assets/img/video.svg')]">
-                                  <video
-                                    class="absolute inset-0 w-full h-full object-cover z-10"
-                                    autoplay
-                                    loop
-                                    muted
-                                    playsinline
-                                    controls
-                                    preload="metadata"
-                                    poster="assets/img/video-poster.webp"
-                                >
-                                    <source src="assets/img/vid.mp4" type="video/mp4" />
-                                </video>
+                                class="relative w-full pb-[56.25%] overflow-hidden lg:after:content-[''] lg:after:absolute lg:after:h-[100%] lg:after:-bottom-[80px] lg:after:-right-[127px] lg:after:-z-10 lg:after:bg-no-repeat lg:after:bg-[url('assets/img/video.svg')]">
+                                    <video
+                                        class="absolute inset-0 w-full h-full object-cover z-10"
+                                        autoplay
+                                        loop
+                                        muted
+                                        playsinline
+                                        controls
+                                        preload="none"
+                                        poster="assets/img/video-poster.webp"
+                                    >
+                                        <source src="assets/img/vid.webm" type="video/webm" />
+                                        <source src="assets/img/vid.mp4" type="video/mp4" />
+                                    </video>
                             </div>
                         </div>
                     </div>
