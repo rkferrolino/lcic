@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <title>LCIC</title>
@@ -7,15 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="site-base" content="https://demo.chronostep.com/develop/lcic/">
     <script src="assets/js/tailwind-browser.js"></script>
-    <script src="assets/js/language-handler.js" defer></script>
-    <script src="assets/js/translation.js"></script>
-    <!-- <link rel="icon" type="image/png" href="assets/img/favicon.png"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="preload" as="image" href="assets/img/banner-img-cropped.webp">
+</head>
 
 <body class="text-en" data-transparent-header="true">
     <section class="relative min-h-screen overflow-hidden">
@@ -38,41 +36,6 @@
         </div>
 
         </div>
-        <!-- <div class="relative pr-0 2xl:pr-[95px]"> -->
-        <!-- <div class="absolute inset-0 pr-0 2xl:pr-[95px]">
-            <div class="w-full h-full 
-            bg-[linear-gradient(#2222228D,_#2222228D),url('assets/img/banner-img-cropped.webp')] 
-            bg-cover bg-center rounded-br-[70px]">
-            </div>
-        </div> -->
-        <!-- <div
-                class="w-full absolute inset-0 
-        bg-[linear-gradient(#2222228D,_#2222228D),url('assets/img/banner-img-cropped.webp')] 
-        bg-cover bg-center rounded-br-[70px]">
-            </div> -->
-        <!-- <div class="relative w-full h-screen rounded-br-[70px] overflow-hidden">
-
-                <img 
-                src="assets/img/banner-img-cropped-1600.webp"
-                srcset="
-                    assets/img/banner-img-cropped-640.webp 640w,
-                    assets/img/banner-img-cropped-768.webp 768w,
-                    assets/img/banner-img-cropped-1024.webp 1024w,
-                    assets/img/banner-img-cropped-1600.webp 1600w
-                "
-                sizes="100vw"
-                alt="Banner"
-                class="absolute inset-0 w-full h-full object-cover"
-                loading="eager"
-                fetchpriority="high"
-                width="1600"
-                height="900"
-                />
-
-                <div class="absolute inset-0 bg-[#2222228D]"></div>
-
-            </div> -->
-        <!-- </div> -->
         <header id="mainHeader" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-transparent">
             <div class="relative bg-transparent w-full">
                 <div
@@ -88,7 +51,7 @@
                         <button
                             onclick="document.getElementById('mobileMenu').classList.remove('hidden'); forceWhiteLogoWhenMenuOpen();"
                             class="flex flex-col justify-center items-center w-[75px] sm:w-[85px] lg:w-[95px] bg-[#004485] gap-[4px] min-h-[70px] sm:min-h-[82px] lg:min-h-[92px]">
-                            <img src="assets/img/menu.webp" alt="Menu" class="w-6 h-6 mb-[2px]">
+                            <i class="fa-solid fa-bars text-xl mb-[2px] text-white"></i>
                             <span class="font-[600] text-[12px] leading-[16px] text-white ">MENU</span>
                         </button>
                         <!-- Language button  -->
@@ -362,12 +325,9 @@
                                         <li><a href="foreign-language.html">Foreign Language</a></li>
                                         <li><a href="english-language-studies.html">English Language Studies</a></li>
                                         <li><a href="cels.html">CELS</a></li>
-                                        <!-- <li><a href="research-extension-library.html">Research, Extension and
-                                                Library</a></li> -->
                                     </ul>
                                 </li>
 
-                                <!-- Scholarship & Financial Aid Dropdown -->
                                 <li>
                                     <a href="scholarship-financial-aid.html"
                                         class="flex justify-between items-center w-full text-[16px] font-normal">
@@ -375,7 +335,6 @@
                                     </a>
                                 </li>
 
-                                <!-- How to Apply Dropdown -->
                                 <li>
                                     <button onclick="toggleDropdown('mobileApplyDropdown')"
                                         class="flex justify-between items-center w-full text-[16px] font-normal">
@@ -397,7 +356,6 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- Student Life -->
                         <div>
                             <button onclick="toggleDropdown('studentServicesDropdown')"
                                 class="flex justify-between items-center w-full text-[16px] font-semibold">
@@ -432,7 +390,6 @@
 
                             </ul>
                         </div>
-                        <!-- Discover Us -->
                         <div>
                             <button onclick="toggleDropdown('aboutUsDropdown')"
                                 class="flex justify-between items-center w-full text-[16px] font-semibold">
@@ -459,19 +416,16 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- Research and Extension -->
                         <div>
                             <a href="research-and-extension.html"
                                 class="flex justify-between items-center w-full text-[16px] font-semibold">Research and
                                 Extension</a>
                         </div>
-                        <!-- Network and Linkages -->
                         <div>
                             <a href="network-and-linkages.html"
                                 class="flex justify-between items-center w-full text-[16px] font-semibold">Network and
                                 Linkages</a>
                         </div>
-                        <!-- Careers -->
                         <div>
                             <a href="careers.html"
                                 class="flex justify-between items-center w-full text-[16px] font-semibold">Careers</a>
@@ -494,10 +448,8 @@
                 </div>
             </div>
         </header>
-        <!-- MOBILE LANGUAGE MODAL -->
         <header id="mobileLanguage" class="fixed inset-0 z-[100] flex bg-[#A6CAED] text-white hidden">
             <div class="flex flex-col w-full min-h-screen py-30 px-15 overflow-y-auto relative">
-                <!-- TOP BAR (Logo + Buttons) -->
                 <div class="flex items-center justify-between w-full fixed top-0 left-0 bg-[#A6CAED] px-0 py-0 z-50">
                     <!-- Logo -->
                     <div class="flex items-center space-x-2 pt-[4px]">
@@ -505,12 +457,10 @@
                             <img src="assets/img/brand-logo-white.webp" alt="Logo" class="w-50 sm:w-auto">
                         </a>
                     </div>
-                    <!-- Buttons (Close + Language) -->
                     <div class="flex right-0">
-                        <!-- CLOSE button -->
                         <button
                             class="flex flex-col justify-center items-center w-[75px] sm:w-[85px] lg:w-[95px] bg-[#004485] gap-[4px] min-h-[70px] sm:min-h-[82px] lg:min-h-[92px]">
-                            <img src="assets/img/menu.webp" alt="Close" class="w-6 h-6 mb-[2px]">
+                            <i class="fa-solid fa-bars text-xl mb-[2px] text-white"></i>
                             <span class="font-[600] text-[12px] leading-[16px] text-white ">
                                 MENU
                             </span>
@@ -563,13 +513,11 @@
 
                 <div class="w-[50%] max-lg:w-full">
 
-                    <!-- LABEL -->
                     <span
                         class="asap-font bg-[#DFEFFF] asap-font text-[#0055A6] px-[12px] py-[8px]  text-[12px] font-bold rounded-[5px] tracking-[1px] mb-[10px] max-md:mb-[5px] w-fit block">
                         Lapulapu-Cebu International College
                     </span>
 
-                    <!-- TITLE -->
                     <h1 class="w-full md:w-[700px] text-[80px] text-white tracking-[4%] sm:tracking-[8px] leading-[120%] sm:leading-[130%] font-bold max-sm:text-[40px] 
                         [@media(max-width:1024px)_and_(max-height:600px)]:text-[50px]
                         [@media(max-width:1024px)_and_(max-height:768px)]:text-[50px]
@@ -578,7 +526,6 @@
                         Lapulapu-Cebu International College
                     </h1>
 
-                    <!-- DESCRIPTION -->
                     <p class="text-[24px] text-white font-medium tracking-[1px] max-md:text-[12px]  
                         [@media(max-width:1024px)_and_(max-height:600px)]:text-[16px]
                         [@media(max-width:1024px)_and_(max-height:768px)]:text-[16px]">
@@ -586,15 +533,13 @@
                         and cultivating global talent.
                     </p>
 
-                    <!-- BUTTONS -->
                     <div class="flex gap-4 mt-10 max-md:flex-col">
 
-                        <!-- BTN 1 -->
                         <a href="admission-process.html" class="inline-flex items-center justify-center gap-2 
                         bg-[#0055A6] text-white 
                         px-8 py-4 rounded-full font-semibold 
                         hover:bg-[#004a8f] transition">
-                            <span data-text-key="AdmissionGuide" class="whitespace-nowrap">Admission Guide</span>
+                            <span class="whitespace-nowrap">Admission Guide</span>
                             <svg viewBox="0 0 24 24"
                                 class="shrink-0 size-5 -mr-1 transition-transform group-hover:translate-x-1" fill="none"
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -602,7 +547,6 @@
                             </svg>
                         </a>
 
-                        <!-- BTN 2 -->
                         <a href="at-a-glance.html" class="inline-flex items-center justify-center gap-2 
                         bg-white text-[#0055A6] 
                         px-8 py-4 rounded-full font-semibold 
@@ -634,11 +578,10 @@
     <div>
         <div class="bg-white px-10 py-20 rounded-t-[60px] max-md:py-10 max-md:px-0">
             <div class="max-w-7xl mx-auto px-6 py-10 md:py-20 max-md:px-[15px]">
-                <!-- Heading -->
                 <div class="text-center wow fadeInUp">
                     <p
                         class="asap-font font-semibold mx-auto w-fit tracking-wide flex items-center gap-2 text-[#002242] text-3xl max-sm:text-[18px]">
-                        <img src="assets/img/logomark-small.webp" alt="logomark">
+                        <img src="assets/img/logomark-small.webp" alt="logomark" class="h-6 w-auto">
                         Enroll Now!
                     </p>
                     <h2
@@ -662,11 +605,9 @@
                     </p>
                 </div>
 
-                <!-- video wrapper -->
                 <section class="container mx-auto px-4 py-24">
                     <div class="flex justify-center">
                         <div class="w-full xl:w-12/12 relative">
-                            <!-- 16:9 Video Wrapper -->
                             <div
                                 class="relative w-full pb-[56.25%] overflow-hidden lg:after:content-[''] lg:after:absolute lg:after:h-[100%] lg:after:-bottom-[80px] lg:after:-right-[127px] lg:after:-z-10 lg:after:bg-no-repeat lg:after:bg-[url('assets/img/video.svg')]">
                                     <video
@@ -689,7 +630,6 @@
             </div>
         </div>
         <div class="relative pt-[300px] mt-[-570px] overflow-hidden">
-            <!-- class="bg-[url('assets/img/why-choose.webp')] bg-cover bg-bottom pt-[300px] mt-[-570px] -->
             <img src="assets/img/why-choose-1600.webp" srcset="
                 assets/img/why-choose-640.webp 640w,
                 assets/img/why-choose-768.webp 768w,
@@ -706,12 +646,10 @@
                     <a href="https://cels.lcic.edu.ph/" target="_blank"
                         class="flex flex-col md:flex-row items-center gap-6 md:gap-12 hover:opacity-90 transition cursor-pointer">
 
-                        <!-- Big logo on left -->
                         <img src="assets/img/sis-logo2.webp"
                             class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-80 lg:h-auto object-contain rounded-full wow fadeInLeft"
                             alt="LCIC-CELS Logo">
 
-                        <!-- Name text on right, two lines -->
                         <div class="text-center md:text-left wow fadeInRight">
                             <span
                                 class="block text-[18px] sm:text-[26px] md:text-[34px] lg:text-[40px] font-extrabold leading-snug text-slate-900 tracking-wide">
@@ -726,24 +664,24 @@
             <section class="pt-[50px] max-md:pb-[50px]">
                 <div
                     class="max-w-7xl mx-auto px-6 py-10 md:py-20 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-                    <!-- Left copy -->
                     <div class="wow fadeInUp">
                         <p
                             class="asap-font font-semibold tracking-wide flex items-center gap-2 text-[#002242] text-3xl max-sm:text-[18px]">
-                            <img src="assets/img/logomark-small.webp" alt="logomark">
+                            <img src="assets/img/logomark-small.webp" alt="logomark" class="h-6 w-auto">
                             Why Choose LCIC?
                         </p>
-                        <h2 data-text-key="ExcellenceInLearning"
+                        <h2
                             class="mt-3 text-[28px] sm:text-[36px] md:text-[44px] lg:text-[60px] font-extrabold leading-tight text-slate-900 tracking-wide">
+                            Connecting communities <br> through excellence <br> in learning
                         </h2>
-                        <p data-text-key="ExcellenceInLearningParagraph"
-                            class="mt-6 text-slate-600 text-base sm:text-lg leading-relaxed"></p>
+                        <p class="mt-6 text-slate-600 text-base sm:text-lg leading-relaxed">
+                            At LCIC, learning goes beyond the confines of textbooks. We offer global <br/> programs, diverse campuses, and support to thrive internationally. <br/> From tourism to engineering—your future begins here.
+                        </p>
                     </div>
-                    <!-- Right image -->
                     <div class="relative mx-auto lg:ml-auto lg:pt-[100px] wow fadeInDown">
                         <div
                             class="mt-4 w-full max-w-[600px] mx-auto [@media(min-width:375px)]:-ml-[35px] [@media(min-width:375px)]:-mr-[25px] [@media(min-width:375px)]:w-[120%]">
-                            <img data-text-key="StrongPoints" class="w-full h-auto" alt="Strong Points" loading="lazy"
+                            <img src="assets/img/strong-points-en.webp" class="w-full h-auto" alt="Strong Points" loading="lazy"
                                 decoding="async" width="1024" height="600">
                         </div>
                     </div>
@@ -753,11 +691,10 @@
         <div class="bg-white px-10 rounded-t-[60px] max-md:px-0">
             <div class="max-w-7xl mx-auto xl:px-6 md:py-20">
 
-                <!-- Heading -->
                 <div class="text-center wow fadeInUp">
                     <p
                         class="asap-font font-semibold tracking-wide flex items-center gap-2 text-[#002242] text-3xl max-sm:text-[18px] justify-center mx-auto">
-                        <img src="assets/img/logomark-small.webp" alt="">
+                        <img src="assets/img/logomark-small.webp" alt="logomark" class="h-6 w-auto">
                         News and Updates
                     </p>
 
@@ -772,11 +709,9 @@
                     </p>
                 </div>
 
-                <!-- Slick Slider -->
                 <div class="mt-14">
                     <div class="news-slider">
 
-                        <!-- Slide -->
                         <div class="px-3 wow fadeInRight" data-wow-delay="0.1s">
                             <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
                                 <img 
@@ -788,16 +723,15 @@
                                 decoding="async"
                                 class="w-full h-[220px] object-cover"
                                 />
-                                <!-- <img src="assets/img/news-10.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
                                         April 19, 2026
                                     </p>
 
-                                    <h3 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
+                                    <h1 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
                                         LCIC Samurai Dominate Week Two with Back-to-Back Wins
-                                    </h3>
+                                    </h1>
 
                                     <p class="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-2">
                                         The Samurai Flag Football team of LapuLapu-Cebu International College (LCIC)
@@ -827,17 +761,16 @@
                                 decoding="async"
                                 class="w-full h-[220px] object-cover"
                                 />
-                                <!-- <img src="assets/img/news-7.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
                                         April 12, 2026
                                     </p>
 
-                                    <h3 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
+                                    <h1 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
                                         LCIC Samurai Show Heart, Look Ahead in Cebu Flag Football Intercollegiate Season
                                         X
-                                    </h3>
+                                    </h1>
 
                                     <p class="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-2">
                                         On April 12, 2026, the LCIC Samurai Flag Football Team (Mixed) competed in the
@@ -870,17 +803,16 @@
                                 decoding="async"
                                 class="w-full h-[220px] object-cover"
                                 />
-                                <!-- <img src="assets/img/news-8.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
                                         April 11–12, 2026
                                     </p>
 
-                                    <h3 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
+                                    <h1 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
                                         With Grit and Glory, LCIC's Smart Stags
                                         Secure Runner-Up Finish
-                                    </h3>
+                                    </h1>
 
                                     <p class="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-2">
                                         The Lapulapu-Cebu International College (LCIC) Futsal Team, Smart Stags,
@@ -897,7 +829,6 @@
                             </div>
                         </div>
 
-                        <!-- Slide -->
                         <div class="px-3 wow fadeInRight" data-wow-delay="0.1s">
                             <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
                                 <img 
@@ -909,16 +840,15 @@
                                 decoding="async"
                                 class="w-full h-[220px] object-cover"
                                 />
-                                <!-- <img src="assets/img/news-9.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
                                         April 11, 2026
                                     </p>
 
-                                    <h3 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
+                                    <h1 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
                                         Trails, Trees, and the Thrill: The First LCIC Interdepartmental Hike
-                                    </h3>
+                                    </h1>
 
                                     <p class="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-2">
                                         𝘏𝘰𝘸 𝘭𝘰𝘯𝘨 𝘩𝘢𝘴 𝘪𝘵 𝘣𝘦𝘦𝘯 𝘴𝘪𝘯𝘤𝘦 𝘺𝘰𝘶 𝘭𝘢𝘴𝘵 𝘧𝘦𝘭𝘵 𝘵𝘩𝘦
@@ -952,17 +882,16 @@
                                 decoding="async"
                                 class="w-full h-[220px] object-cover"
                                 />
-                                <!-- <img src="assets/img/news-6.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
                                         March 16–19 2026
                                     </p>
 
-                                    <h3 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
+                                    <h1 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
                                         “𝐂𝐄𝐦𝐞𝐧𝐭𝐢𝐧𝐠 the Gaps: Strengthening Bonds Between Students and
                                         𝐏𝐫𝐨𝐠𝐫𝐞𝐬𝐬”
-                                    </h3>
+                                    </h1>
 
                                     <p class="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-2">
                                         The spirit of CE Week rises again,
@@ -980,7 +909,6 @@
                             </div>
                         </div>
 
-                        <!-- Slide -->
                         <div class="px-3 wow fadeInRight" data-wow-delay="0.1s">
                             <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
                                 <img 
@@ -992,16 +920,15 @@
                                 decoding="async"
                                 class="w-full h-[220px] object-cover"
                                 />
-                                <!-- <img src="assets/img/news-4.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
                                         March 16, 2026
                                     </p>
 
-                                    <h3 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
+                                    <h1 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
                                         LCIC Launches Vision Dialogue as New President Meets Student Leaders
-                                    </h3>
+                                    </h1>
 
                                     <p class="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-2">
                                         Student leaders from various departments gathered earlier today,
@@ -1031,17 +958,16 @@
                                 decoding="async"
                                 class="w-full h-[220px] object-cover"
                                 />
-                                <!-- <img src="assets/img/news-5.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
                                         March 13 – 15, 2026
                                     </p>
 
-                                    <h3 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
+                                    <h1 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
                                         LCIC Soars Success at 11th International Travel Festival; Quimat Secures 2nd in
                                         Tour Vlogging
-                                    </h3>
+                                    </h1>
 
                                     <p class="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-2">
                                         CEBU CITY, Philippines — Lapulapu-Cebu International College (LCIC)
@@ -1058,7 +984,6 @@
                             </div>
                         </div>
 
-                        <!-- Slide -->
                         <div class="px-3 wow fadeInRight" data-wow-delay="0.1s">
                             <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
                                 <img 
@@ -1070,16 +995,15 @@
                                 decoding="async"
                                 class="w-full h-[220px] object-cover"
                                 />
-                                <!-- <img src="assets/img/news-3.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
                                         January 23, 2026
                                     </p>
 
-                                    <h3 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
+                                    <h1 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
                                         LCIC-CELS Becomes an Official TOEIC Testing Center
-                                    </h3>
+                                    </h1>
 
                                     <p class="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-2">
                                         LCIC-CELS is now an official TOEIC® Testing Center, enabling on-campus
@@ -1096,7 +1020,6 @@
                             </div>
                         </div>
 
-                        <!-- Slide -->
                         <div class="px-3 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
                                 <img 
@@ -1108,16 +1031,15 @@
                                 decoding="async"
                                 class="w-full h-[220px] object-cover"
                                 />
-                                <!-- <img src="assets/img/news-2.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
                                         January 23, 2026
                                     </p>
 
-                                    <h3 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
+                                    <h1 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
                                         LCIC Conducts Departmental Orientation for Second Semester A.Y. 2025-2026
-                                    </h3>
+                                    </h1>
 
                                     <p class="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-2">
                                         LCIC conducted departmental orientations this January 2026 for Tourism
@@ -1134,7 +1056,6 @@
                             </div>
                         </div>
 
-                        <!-- Slide -->
                         <div class="px-3 wow fadeInLeft" data-wow-delay="0.1s">
                             <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
                                 <img 
@@ -1146,17 +1067,16 @@
                                 decoding="async"
                                 class="w-full h-[220px] object-cover"
                                 />
-                                <!-- <img src="assets/img/news-1.webp" alt="" class="w-full h-[220px] object-cover"> -->
 
                                 <div class="p-6">
                                     <p class="text-xs text-slate-500 mb-2">
                                         January 12, 2026
                                     </p>
 
-                                    <h3 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
+                                    <h1 class="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
                                         LCIC Physical Therapists Achieve 100 Percent Passing Rate, Marking a Historic
                                         Milestone
-                                    </h3>
+                                    </h1>
 
                                     <p class="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-2">
                                         LCIC marks a historic milestone as its first Physical Therapy graduates achieved
@@ -1175,7 +1095,6 @@
                     </div>
                 </div>
 
-                <!-- View All Button -->
                 <div class="text-center mt-14">
                     <a href="announcements.html" class="inline-flex items-center justify-center gap-3 rounded-full px-10 py-5
                 bg-[#0055A6] text-white font-semibold tracking-wide
@@ -1192,14 +1111,15 @@
                 <div class="wow fadeInUp">
                     <p
                         class="asap-font font-semibold tracking-wide flex items-center gap-2  text-[#002242] mt-7 text-center justify-center text-3xl max-sm:text-[18px]">
-                        <img src="assets/img/logomark-small.webp">
+                        <img src="assets/img/logomark-small.webp" alt="logomark" class="h-6 w-auto">
                         Academic Programs
                     </p>
-                    <h2 data-text-key="AcademicsProgramsHeader"
+                    <h2
                         class="mt-3 text-[30px] sm:text-[40px] md:text-[50px] lg:text-[60px] font-extrabold leading-tight text-slate-900 tracking-[2px] leading-[80px] text-center">
+                    Academic Programs
                     </h2>
-                    <p data-text-key="AcademicsProgramsDescription"
-                        class="mt-6 text-slate-600 leading-relaxed text-base text-xl max-md:text-[16px] leading-[200px] tracking-[3px]  text-center">
+                    <p class="mt-6 text-slate-600 leading-relaxed text-base text-xl max-md:text-[16px] leading-[200px] tracking-[3px]  text-center">
+                        We cultivate professionals with expertise and a global perspective through five degree programs and our Center for English Language Studies (CELS).
                     </p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-15">
@@ -1207,7 +1127,6 @@
                         data-wow-delay="0s">
                         <figure class="relative">
                             <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat">
-                                <!-- style="background-image: url('assets/img/foriegn-language-banner.webp');"> -->
                                 <img
                                 class="h-full w-full object-cover" 
                                 src="assets/img/foriegn-language-banner.webp"
@@ -1227,34 +1146,30 @@
                                 Bachelor of Arts in Foreign
                                 Languages
                             </p>
-                            <!-- <p class="asap-font text-[11px] text-[#111111] -mt-0.5"></p> -->
-                            <h3 data-text-key="AcademicCard1CourseDescription"
-                                class="mt-3 text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] font-bold leading-snug text-slate-900 md:line-clamp-2">
+                            <h3 class="mt-3 text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] font-bold leading-snug text-slate-900 md:line-clamp-2">
+                                Acquire language skills and international sensibility to thrive in a global society.
                             </h3>
-                            <!-- tags -->
                             <div class="mt-3 flex flex-wrap gap-[8px]">
-                                <span data-text-key="AcademicCard1CourseBadge1"
-                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-sky-50 text-sky-700 font-semibold"></span>
-                                <span data-text-key="AcademicCard1CourseBadge2"
-                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-sky-50 text-sky-700 font-semibold"></span>
-                                <span data-text-key="AcademicCard1CourseBadge3"
-                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-sky-50 text-sky-700 font-semibold"></span>
+                                <span
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-sky-50 text-sky-700 font-semibold">Multilingual Acquisition</span>
+                                <span
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-sky-50 text-sky-700 font-semibold">International Exchange</span>
+                                <span
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-sky-50 text-sky-700 font-semibold">Cross-Cultural Understanding</span>
                             </div>
-                            <!-- stats -->
                             <div class="mt-4 grid grid-cols-2 gap-4 text-slate-700">
                                 <div>
-                                    <span data-text-key="AcademicCardDuration"
-                                        class="text-[10px] sm:text-[12px]"></span>
+                                    <span
+                                        class="text-[10px] sm:text-[12px]">Duration：</span>
                                     <span
                                         class="asap-font text-[28px] sm:text-[20px] font-extrabold text-sky-700 leading-none align-middle">4</span>
-                                    <span data-text-key="AcademicCardYears"
-                                        class="text-[10px]  sm:text-[12px] text-sky-700"></span>
+                                    <span
+                                        class="text-[10px]  sm:text-[12px] text-sky-700">years</span>
                                 </div>
                             </div>
-                            <!-- CTA -->
                             <a href="foreign-language.html"
                                 class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-white font-semibold shadow hover:bg-sky-800 transition">
-                                <span data-text-key="AcademicCardProgDetailsBTN"></span>
+                                <span>Program Details</span>
                                 <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M5 12h14M13 5l7 7-7 7" />
@@ -1266,7 +1181,6 @@
                         data-wow-delay="0.1s">
                         <figure class="relative">
                             <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat">
-                                <!-- style="background-image: url('assets/img/baels2-banner.webp');"> -->
                                 <img 
                                 class="h-full w-full object-cover"
                                 src="assets/img/baels2-banner.webp"
@@ -1286,31 +1200,31 @@
                                 Bachelor of Arts in English Language
                                 Studies
                             </p>
-                            <!-- <p class="asap-font text-[11px] text-[#111111] -mt-0.5"></p> -->
-                            <h3 data-text-key="AcademicCard2CourseDescription"
+                            <h3
                                 class="mt-3 text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] font-bold leading-snug text-slate-900 md:line-clamp-2">
+                                Deepen systematic knowledge in English education and linguistics to foster international communication skills.
                             </h3>
                             <div class="mt-3 flex flex-wrap gap-[8px]">
-                                <span data-text-key="AcademicCard2CourseBadge1"
-                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-emerald-50 text-emerald-700 font-semibold"></span>
-                                <span data-text-key="AcademicCard2CourseBadge2"
-                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-emerald-50 text-emerald-700 font-semibold"></span>
-                                <span data-text-key="AcademicCard2CourseBadge3"
-                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-emerald-50 text-emerald-700 font-semibold"></span>
+                                <span
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-emerald-50 text-emerald-700 font-semibold">English Education</span>
+                                <span
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-emerald-50 text-emerald-700 font-semibold">Linguistics Research</span>
+                                <span
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-emerald-50 text-emerald-700 font-semibold">Teacher Training</span>
                             </div>
                             <div class="mt-4 grid grid-cols-2 gap-4 text-slate-700">
                                 <div>
-                                    <span data-text-key="AcademicCardDuration"
-                                        class="text-[10px] sm:text-[12px]"></span>
+                                    <span
+                                        class="text-[10px] sm:text-[12px]">Duration：</span>
                                     <span
                                         class="asap-font text-[28px] sm:text-[20px] font-extrabold text-sky-700 leading-none align-middle">4</span>
-                                    <span data-text-key="AcademicCardYears"
-                                        class="text-[10px]  sm:text-[12px] text-sky-700"></span>
+                                    <span
+                                        class="text-[10px]  sm:text-[12px] text-sky-700">years</span>
                                 </div>
                             </div>
                             <a href="english-language-studies.html"
                                 class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-white font-semibold shadow hover:bg-sky-800 transition">
-                                <span data-text-key="AcademicCardProgDetailsBTN"></span>
+                                <span>Program Details</span>
                                 <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M5 12h14M13 5l7 7-7 7" />
@@ -1322,7 +1236,6 @@
                         data-wow-delay="0.2s">
                         <figure class="relative">
                             <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat">
-                                <!-- style="background-image: url('assets/img/tm-banner.webp');"> -->
                                 <img class="h-full w-full object-cover" 
                                 src="assets/img/tm-banner.webp"
                                 alt="BSTM"
@@ -1341,31 +1254,30 @@
                                 Bachelor of Science in Tourism
                                 Management
                             </p>
-                            <!-- <p class="asap-font text-[11px] text-[#111111] -mt-0.5"></p> -->
-                            <h3 data-text-key="AcademicCard3CourseDescription"
-                                class="mt-3 text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] font-bold leading-snug text-slate-900 md:line-clamp-2">
+                            <h3 class="mt-3 text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] font-bold leading-snug text-slate-900 md:line-clamp-2">
+                                Build essential skills for a career in hospitality, travel, and tourism. Gain hands-on experience through internships in one of ASEAN’s premier historic resort destinations.
                             </h3>
                             <div class="mt-3 flex flex-wrap gap-[8px]">
-                                <span data-text-key="AcademicCard3CourseBadge1"
-                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-fuchsia-50 text-fuchsia-700 font-semibold"></span>
-                                <span data-text-key="AcademicCard3CourseBadge2"
-                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-fuchsia-50 text-fuchsia-700 font-semibold"></span>
-                                <span data-text-key="AcademicCard3CourseBadge3"
-                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-fuchsia-50 text-fuchsia-700 font-semibold"></span>
+                                <span
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-fuchsia-50 text-fuchsia-700 font-semibold">Customer Service</span>
+                                <span
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-fuchsia-50 text-fuchsia-700 font-semibold">Marketing</span>
+                                <span
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-fuchsia-50 text-fuchsia-700 font-semibold">Event & Travel Operations</span>
                             </div>
                             <div class="mt-4 grid grid-cols-2 gap-4 text-slate-700">
                                 <div>
-                                    <span data-text-key="AcademicCardDuration"
-                                        class="text-[10px] sm:text-[12px]"></span>
+                                    <span
+                                        class="text-[10px] sm:text-[12px]">Duration：</span>
                                     <span
                                         class="asap-font text-[28px] sm:text-[20px] font-extrabold text-sky-700 leading-none align-middle">4</span>
-                                    <span data-text-key="AcademicCardYears"
-                                        class="text-[10px]  sm:text-[12px] text-sky-700"></span>
+                                    <span
+                                        class="text-[10px]  sm:text-[12px] text-sky-700">years</span>
                                 </div>
                             </div>
                             <a href="tourism-management.html"
                                 class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-white font-semibold shadow hover:bg-sky-800 transition">
-                                <span data-text-key="AcademicCardProgDetailsBTN"></span>
+                                <span>Program Details</span>
                                 <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M5 12h14M13 5l7 7-7 7" />
@@ -1377,7 +1289,6 @@
                         data-wow-delay="0.3s">
                         <figure class="relative">
                             <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat">
-                                <!-- style="background-image: url('assets/img/civil-engineering-banner.webp');"> -->
                                 <img class="h-full w-full object-cover" 
                                 src="assets/img/civil-engineering-banner.webp"
                                 alt="BAFL"
@@ -1395,34 +1306,31 @@
                                 Bachelor of Science in Civil
                                 Engineering
                             </p>
-                            <!-- <p class="asap-font text-[11px] text-[#111111] -mt-0.5"></p> -->
-                            <h3 data-text-key="AcademicCard4CourseDescription"
+                            <h3
                                 class="mt-3 text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] font-bold leading-snug text-slate-900 md:line-clamp-2">
+                                Civil Engineering students design and manage structures with hands-on experience.
                             </h3>
-                            <!-- tags -->
                             <div class="mt-3 flex flex-wrap gap-[8px]">
-                                <span data-text-key="AcademicCard4CourseBadge1"
-                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-sky-50 text-sky-700 font-semibold"></span>
-                                <span data-text-key="AcademicCard4CourseBadge2"
-                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-sky-50 text-sky-700 font-semibold"></span>
-                                <span data-text-key="AcademicCard4CourseBadge3"
-                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-sky-50 text-sky-700 font-semibold"></span>
+                                <span
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-sky-50 text-sky-700 font-semibold">Structural Design</span>
+                                <span
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-sky-50 text-sky-700 font-semibold">Water Systems</span>
+                                <span
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-sky-50 text-sky-700 font-semibold">Construction Management</span>
                             </div>
-                            <!-- stats -->
                             <div class="mt-4 grid grid-cols-2 gap-4 text-slate-700">
                                 <div>
-                                    <span data-text-key="AcademicCardDuration"
-                                        class="text-[10px] sm:text-[12px]"></span>
+                                    <span
+                                        class="text-[10px] sm:text-[12px]">Duration：</span>
                                     <span
                                         class="asap-font text-[28px] sm:text-[20px] font-extrabold text-sky-700 leading-none align-middle">4</span>
-                                    <span data-text-key="AcademicCardYears"
-                                        class="text-[10px]  sm:text-[12px] text-sky-700"></span>
+                                    <span
+                                        class="text-[10px]  sm:text-[12px] text-sky-700">years</span>
                                 </div>
                             </div>
-                            <!-- CTA -->
                             <a href="civil-engineering.html"
                                 class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-white font-semibold shadow hover:bg-sky-800 transition">
-                                <span data-text-key="AcademicCardProgDetailsBTN"></span>
+                                <span>Program Details</span>
                                 <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M5 12h14M13 5l7 7-7 7" />
@@ -1434,7 +1342,6 @@
                         data-wow-delay="0.4s">
                         <figure class="relative">
                             <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat">
-                                <!-- style="background-image: url('assets/img/physical-theraphy-banner.webp');"> -->
                                 <img 
                                 class="h-full w-full object-cover" 
                                 src="assets/img/physical-theraphy-banner.webp" 
@@ -1454,31 +1361,31 @@
                                 Bachelor of Science in Physical
                                 Therapy
                             </p>
-                            <!-- <p class="asap-font text-[11px] text-[#111111] -mt-0.5"></p> -->
-                            <h3 data-text-key="AcademicCard5CourseDescription"
+                            <h3
                                 class="mt-3 text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] font-bold leading-snug text-slate-900 md:line-clamp-2">
+                                Training professionals to support patient recovery with medical knowledge and skills.
                             </h3>
                             <div class="mt-3 flex flex-wrap gap-[8px]">
-                                <span data-text-key="AcademicCard5CourseBadge1"
-                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-emerald-50 text-emerald-700 font-semibold"></span>
-                                <span data-text-key="AcademicCard5CourseBadge2"
-                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-emerald-50 text-emerald-700 font-semibold"></span>
-                                <span data-text-key="AcademicCard5CourseBadge3"
-                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-emerald-50 text-emerald-700 font-semibold"></span>
+                                <span
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-emerald-50 text-emerald-700 font-semibold">Clinical Practice</span>
+                                <span
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-emerald-50 text-emerald-700 font-semibold">Rehabilitation Techniques</span>
+                                <span
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-emerald-50 text-emerald-700 font-semibold">Medical Fundamentals</span>
                             </div>
                             <div class="mt-4 grid grid-cols-2 gap-4 text-slate-700">
                                 <div>
-                                    <span data-text-key="AcademicCardDuration"
-                                        class="text-[10px] sm:text-[12px]"></span>
+                                    <span
+                                        class="text-[10px] sm:text-[12px]">Duration：</span>
                                     <span
                                         class="asap-font text-[28px] sm:text-[20px] font-extrabold text-sky-700 leading-none align-middle">4</span>
-                                    <span data-text-key="AcademicCardYears"
-                                        class="text-[10px]  sm:text-[12px] text-sky-700"></span>
+                                    <span
+                                        class="text-[10px]  sm:text-[12px] text-sky-700">years</span>
                                 </div>
                             </div>
                             <a href="physical-therapy.html"
                                 class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-white font-semibold shadow hover:bg-sky-800 transition">
-                                <span data-text-key="AcademicCardProgDetailsBTN"></span>
+                                <span>Program Details</span>
                                 <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M5 12h14M13 5l7 7-7 7" />
@@ -1490,7 +1397,6 @@
                         data-wow-delay="0.5s">
                         <figure class="relative">
                             <div class="aspect-[16/10] w-full overflow-hidden bg-cover bg-center bg-no-repeat">
-                                <!-- style="background-image: url('assets/img/cels1-banner.webp');"> -->
                                 <img 
                                 class="h-full w-full object-cover" 
                                 src="assets/img/cels1-banner.webp"
@@ -1509,18 +1415,18 @@
                             <p class="text-[13px] font-semibold text-slate-700">
                                 Center for English Language Studies
                             </p>
-                            <!-- <p class="asap-font text-[11px] text-[#111111] -mt-0.5">
-                            </p> -->
-                            <h3 data-text-key="AcademicCard6CourseDescription"
+
+                            <h3
                                 class="mt-3 text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] font-bold leading-snug text-slate-900 md:line-clamp-2">
+                                Developing international standard language skills through intensive English education programs.
                             </h3>
                             <div class="mt-3 flex flex-wrap gap-[8px]">
-                                <span data-text-key="AcademicCard6CourseBadge1"
-                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-fuchsia-50 text-fuchsia-700 font-semibold"></span>
-                                <span data-text-key="AcademicCard6CourseBadge2"
-                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-fuchsia-50 text-fuchsia-700 font-semibold"></span>
-                                <span data-text-key="AcademicCard6CourseBadge3"
-                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-fuchsia-50 text-fuchsia-700 font-semibold"></span>
+                                <span
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-fuchsia-50 text-fuchsia-700 font-semibold">Intensive English</span>
+                                <span
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-fuchsia-50 text-fuchsia-700 font-semibold">TOEFL Preparation</span>
+                                <span
+                                    class="px-2.5 py-1 text-[10px] sm:text-[12px] rounded-full bg-fuchsia-50 text-fuchsia-700 font-semibold">Study Abroad Preparation</span>
                             </div>
                             <div class="mt-4 grid grid-cols-2 gap-4 text-slate-700">
                                 <div>
@@ -1532,7 +1438,7 @@
                             </div>
                             <a href="cels.html"
                                 class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-white font-semibold shadow hover:bg-sky-800 transition">
-                                <span data-text-key="AcademicCardProgDetailsBTN"></span>
+                                <span>Program Details</span>
                                 <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M5 12h14M13 5l7 7-7 7" />
@@ -1556,10 +1462,10 @@
             <div class="max-w-7xl mx-auto px-6 py-20 py-30 max-md:px-[15px] max-md:pt-[25px]">
                 <article class="rounded-[28px] border border-slate-200 border-white shadow-md bg-transparent">
                     <div class="grid md:grid-cols-2 md:flex-row">
-                        <!-- Text -->
                         <div class="order-1 max-md:order-2 wow fadeInLeft">
-                            <h2 data-text-key="PresidentMessageTitle"
+                            <h2
                                 class=" text-[18px] sm:text-[38px] font-extrabold text-slate-900 max-md:pt-5">
+                                Message from the President
                             </h2>
                             <div class="mt-5 rounded-2xl md:order-2 p-5 [@media(max-width:414px)]:p-0">
                                 <p
@@ -1595,7 +1501,6 @@
                                     International College</p>
                             </div>
                         </div>
-                        <!-- Photo -->
                         <div class="order-2 max-md:order-1 wow fadeInRight">
                             <div
                                 class="mx-auto mt-25 max-w-md max-md:w-full max-md:max-w-full max-sm:h-[389px] overflow-hidden rounded-[22px] ring-1 ring-slate-200 w-[480px] h-[713px] mr-[20px]">
@@ -1604,30 +1509,12 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <article
-                        class="wow fadeInUp mt-8 rounded-[24px] bg-transparent ring-2 ring-slate-200 text-center p-6 md:p-10 bg-white/30 mx-[55px] mb-[55px] relative max-sm:mx-[15px]">
-                        <p data-text-key="FrameTitle" class="text-[20px] font-semibold tracking-wide text-[#001121]">
-                        </p>
-                        <p data-text-key="FramePhrase"
-                            class="mx-auto mt-2 text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-10 text-slate-700 tracking-[3px]">
-                        </p>
-                        <a href="#program-overview"
-                            class="mt-6 inline-flex items-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-white shadow hover:bg-sky-800 transition tracking-[3px]">
-                            <span data-text-key="AcademicCardProgDetailsBTN"></span>
-                            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M13 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                        <img src="assets/img/gradient-ball.webp" class="absolute -right-45 -top-10 max-md:hidden">
-                    </article> -->
                 </article>
             </div>
         </div>
         <section class="bg-[#DFEFFF] py-4">
-            <!-- container: no side padding on mobile, add on md+ -->
             <div class="max-w-7xl mx-auto px-0 md:px-4 overflow-hidden">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                    <!-- MAP -->
                     <div class="overflow-hidden ring-1 ring-slate-200
                     h-72 sm:h-80 md:h-[420px] lg:h-screen
                     rounded-none md:rounded-2xl lg:rounded-r-2xl
@@ -1637,63 +1524,62 @@
                             referrerpolicy="no-referrer-when-downgrade"
                             src="https://www.google.com/maps?q=Lapu-Lapu+Cebu+International+College&output=embed"></iframe>
                     </div>
-                    <!-- RIGHT PANEL -->
                     <div class="px-4 md:px-0 py-6 md:p-8 wow fadeInRight">
-                        <!-- Header -->
                         <p
                             class="asap-font font-semibold tracking-wide flex items-center gap-2  text-[#002242] text-3xl max-sm:text-[18px]">
-                            <img src="assets/img/logomark-small.webp" alt="" class="h-6 w-6">
+                            <img src="assets/img/logomark-small.webp" alt="logomark" class="h-6 w-auto">
                             Contact
                         </p>
-                        <h2 data-text-key="ContactUs"
+                        <h2
                             class="mt-2 text-[30px] sm:text-[40px] md:text-[50px] lg:text-[60px] font-extrabold text-slate-900 mb-6 md:mb-10">
+                        Contact Us
                         </h2>
-                        <!-- Contact list -->
                         <ul class="space-y-3 md:space-y-4">
                             <li
                                 class="flex items-center gap-3 rounded-[10px] ring-1 ring-slate-200 bg-white p-3 max-sm:block">
                                 <span
                                     class="grid h-9 w-9 place-items-center rounded-full bg-sky-100 max-sm:float-left max-sm:mr-[15px]">
-                                    <img src="assets/img/map.webp" alt="">
+                                    <img src="assets/img/map.webp" alt="Map">
                                 </span>
                                 <div class="flex-1 min-w-0">
-                                    <p data-text-key="ContactUsAccessInfoHeader"
-                                        class="text-sm font-semibold text-slate-900"></p>
+                                    <p
+                                        class="text-sm font-semibold text-slate-900">Campus Location</p>
                                     <p class="asap-font text-xs text-slate-500 truncate">
                                         Ticgahon 1 Road, Bankal, Lapu-Lapu City Cebu, 6015 Philippines
                                     </p>
                                 </div>
-                                <a data-text-key="ContactUsViewMapBTN"
+                                <a
                                     href="https://maps.google.com/?q=Lapu-Lapu+Cebu+International+College"
                                     target="_blank"
-                                    class="shrink-0 rounded-full bg-[#0055A6] px-4 py-2 text-white text-xs sm:text-sm font-semibold w-[140px] text-center max-sm:block max-sm:mt-[10px] max-sm:ml-[50px]"></a>
+                                    class="shrink-0 rounded-full bg-[#0055A6] px-4 py-2 text-white text-xs sm:text-sm font-semibold w-[140px] text-center max-sm:block max-sm:mt-[10px] max-sm:ml-[50px]">View Map</a>
                             </li>
                             <li
                                 class="flex items-center gap-3 rounded-[10px] ring-1 ring-slate-200 bg-white p-3 max-sm:block">
                                 <span
                                     class="grid h-9 w-9 place-items-center rounded-full bg-sky-100 max-sm:float-left max-sm:mr-[15px]">
-                                    <img src="assets/img/phone.webp" alt="">
+                                    <img src="assets/img/phone.webp" alt="Phone">
                                 </span>
                                 <div class="flex-1 min-w-0">
-                                    <p data-text-key="ContactUs" class="text-sm font-semibold text-slate-900"></p>
-                                    <p data-text-key="ContactUsMainOffice" class="asap-font text-xs text-slate-500"></p>
+                                    <p class="text-sm font-semibold text-slate-900">Contact Us</p>
+                                    <p class="asap-font text-xs text-slate-500">+63 917 7062 124 (Registrar's Office)</p>
                                 </div>
-                                <a data-text-key="MakeACall" href="tel:+639177062124"
-                                    class="shrink-0 rounded-full bg-[#0055A6] px-4 py-2 text-white text-xs sm:text-sm font-semibold w-[140px] text-center max-sm:block max-sm:mt-[10px] max-sm:ml-[50px]"></a>
+                                <a href="tel:+639177062124"
+                                    class="shrink-0 rounded-full bg-[#0055A6] px-4 py-2 text-white text-xs sm:text-sm font-semibold w-[140px] text-center max-sm:block max-sm:mt-[10px] max-sm:ml-[50px]">Make A Call</a>
                             </li>
                             <li
                                 class="flex items-center gap-3 rounded-[10px] ring-1 ring-slate-200 bg-white p-3 max-sm:block">
                                 <span
                                     class="grid h-9 w-9 place-items-center rounded-full bg-sky-100 max-sm:float-left max-sm:mr-[15px]">
-                                    <img src="assets/img/email.webp" alt="">
+                                    <img src="assets/img/email.webp" alt="Email">
                                 </span>
                                 <div class="flex-1 min-w-0">
-                                    <p data-text-key="ContactUsByEmail" class="text-sm font-semibold text-slate-900">
+                                    <p class="text-sm font-semibold text-slate-900">
+                                        Contact Us by Email
                                     </p>
                                     <p class="asap-font text-xs text-slate-500">information@lcic.edu.ph</p>
                                 </div>
-                                <a data-text-key="SendAnEmail" href="mailto:information@lcic.edu.ph"
-                                    class="shrink-0 rounded-full bg-[#0055A6] px-4 py-2 text-white text-xs sm:text-sm font-semibold w-[140px] text-center max-sm:block max-sm:mt-[10px] max-sm:ml-[50px]"></a>
+                                <a href="mailto:information@lcic.edu.ph"
+                                    class="shrink-0 rounded-full bg-[#0055A6] px-4 py-2 text-white text-xs sm:text-sm font-semibold w-[140px] text-center max-sm:block max-sm:mt-[10px] max-sm:ml-[50px]">Send An Email</a>
                             </li>
                             <li
                                 class="flex items-center gap-3 rounded-[10px] ring-1 ring-slate-200 bg-white p-3 max-sm:block">
@@ -1702,14 +1588,13 @@
                                     <img src="assets/img/clock.webp" alt="">
                                 </span>
                                 <div class="flex-1 min-w-0">
-                                    <p data-text-key="OfficeHoursHead" class="text-sm font-semibold text-slate-900"></p>
-                                    <p data-text-key="OfficeHours" class="text-xs text-slate-500"></p>
+                                    <p class="text-sm font-semibold text-slate-900">Office Hours</p>
+                                    <p class="text-xs text-slate-500">Office Hours</p>
                                 </div>
                             </li>
                         </ul>
-                        <!-- Access -->
-                        <h3 data-text-key="HowToAccessHeader"
-                            class="mt-8 text-base text-[24px] font-extrabold text-slate-900"></h3>
+                        <h3
+                            class="mt-8 text-base text-[24px] font-extrabold text-slate-900">Access Method</h3>
                         <ul class="mt-3 space-y-3">
                             <li class="flex items-center rounded-[10px] ring-1 ring-slate-200 bg-white px-4 py-3">
                                 <span class="grid h-9 w-9 place-items-center rounded-full bg-sky-100">
@@ -1718,70 +1603,72 @@
                                 <div class="flex-1 min-w-0 pl-3">
                                     <p class="text-sm font-semibold text-slate-900">From Mactan-Cebu International
                                         Airport</p>
-                                    <p data-text-key="AccessDetailsCard1MethodInfo" class="text-xs text-slate-500"></p>
+                                    <p class="text-xs text-slate-500">Using taxi or jeepney</p>
                                 </div>
-                                <span data-text-key="AccessDetailsCard1Time"
-                                    class="text-[#0055A6] text-sm md:text-base font-semibold"></span>
+                                <span
+                                    class="text-[#0055A6] text-sm md:text-base font-semibold">About 30 Mins</span>
                             </li>
                             <li class="flex items-center rounded-[10px] ring-1 ring-slate-200 bg-white px-4 py-3">
                                 <span class="grid h-9 w-9 place-items-center rounded-full bg-sky-100">
                                     <img src="assets/img/car.webp" alt="">
                                 </span>
                                 <div class="flex-1 min-w-0 pl-3">
-                                    <p data-text-key="AccessDetailsCard2Header"
-                                        class="text-sm font-semibold text-slate-900"></p>
-                                    <p data-text-key="AccessDetailsCard2MethodInfo" class="text-xs text-slate-500"></p>
+                                    <p
+                                        class="text-sm font-semibold text-slate-900">From Cebu City</p>
+                                    <p class="text-xs text-slate-500">Using bus or taxi</p>
                                 </div>
-                                <span data-text-key="AccessDetailsCard2Time"
-                                    class="text-[#0055A6] text-sm md:text-base font-semibold"></span>
+                                <span
+                                    class="text-[#0055A6] text-sm md:text-base font-semibold">About 40 Mins</span>
                             </li>
                             <li class="flex items-center rounded-[10px] ring-1 ring-slate-200 bg-white px-4 py-3">
                                 <span class="grid h-9 w-9 place-items-center rounded-full bg-sky-100">
                                     <img src="assets/img/plain.webp" alt="">
                                 </span>
                                 <div class="flex-1 min-w-0 pl-3">
-                                    <p data-text-key="AccessDetailsCard3Header"
-                                        class="text-sm font-semibold text-slate-900"></p>
-                                    <p data-text-key="AccessDetailsCard3MethodInfo" class="text-xs text-slate-500"></p>
+                                    <p
+                                        class="text-sm font-semibold text-slate-900">From Lapu-Lapu City</p>
+                                    <p class="text-xs text-slate-500">Using tricycle or jeepney</p>
                                 </div>
-                                <span data-text-key="AccessDetailsCard3Time"
-                                    class="text-[#0055A6] text-sm md:text-base font-semibold"></span>
+                                <span
+                                    class="text-[#0055A6] text-sm md:text-base font-semibold">About 15 Mins</span>
                             </li>
                         </ul>
-                        <a data-text-key="ViewDetailedInfo" href="get-in-touch.html"
-                            class="mt-4 inline-flex items-center text-[14px] justify-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-white font-semibold hover:bg-sky-800"></a>
+                        <a href="get-in-touch.html"
+                            class="mt-4 inline-flex items-center text-[14px] justify-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-white font-semibold hover:bg-sky-800">View detailed info</a>
                     </div>
                 </div>
             </div>
         </section>
         <div class="w-full bg-[#A6CAED] relative overflow-hidden pb-25">
-            <img src="assets/img/Logomark2.webp" class="absolute top-0-left-15">
-            <img src="assets/img/Logomark3.webp" class="absolute bottom-0 -right-15">
+            <img src="assets/img/Logomark2.webp" alt="Logo Mark 2" class="absolute top-0-left-15">
+            <img src="assets/img/Logomark3.webp" alt="Logo Mark 3" class="absolute bottom-0 -right-15">
             <div class="max-w-7xl mx-auto px-2 lg:px-4 py-30 relative z-1 max-md:px-[15px] wow fadeInUp">
                 <div class="text-center">
-                    <h2 data-text-key="AdmissionTitle"
+                    <h2
                         class="mt-2 text-[30px] sm:text-[40px] md:text-[50px] lg:text-[60px] font-extrabold text-slate-900 mb-5">
+                        Let's find your future
                     </h2>
-                    <p data-text-key="AdmissionPhrase"
+                    <p
                         class="text-center text-[20px] sm:text-[22px] md:text-[23px] lg:text-[24px] text-[#111111]  font-semibold tracking-[2px]">
+                    Please see detailed information about each program and admission requirements.
                     </p>
                     <div class="relative mx-auto w-fit mt-8 max-sm:w-full">
                         <div
                             class="flex items-center gap-6 align-middle items-center justify-center p-8 max-sm:block max-sm:p-0">
                             <a href="#program-overview"
                                 class="w-full text-center rounded-full bg-[#0055A6] px-6 py-4 text-white font-semibold text-[16px] sm:text-[20px] shadow-sm hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 max-sm:block max-sm:mb-5">
-                                <span data-text-key="CTABTN1"></span>
+                                <span>List of All Programs →</span>
                             </a>
                             <a href="https://lcic.sandbox-chrono.com/login"
                                 class="w-full text-center rounded-full bg-white px-6 py-4 font-semibold text-[#0055A6] text-[16px] sm:text-[20px] shadow-sm ring-1 ring-blue-200 hover:ring-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-600 max-sm:block focus:ring-offset-2">
-                                <span data-text-key="CTABTN2"></span>
+                                <span>Enrollment Consultation Reservation →</span>
                             </a>
                         </div>
                         <div
                             class="absolute -right-30 top-[50%] transform-[translateY(-50%)] max-md:top-[150%] max-md:right-[-10%] max-sm:right-[5%]">
                             <div
                                 class="flex h-[90px] w-[90px] sm:h-[120px] sm:w-[120px] items-center justify-center rounded-full bg-[#0055A6] text-center text-white text-xs sm:text-sm leading-tight">
-                                <span data-text-key="BubbleReservation"></span>
+                                <span>Easy Reservation</span>
                             </div>
                             <span
                                 class="absolute left-[-14px] top-1/2 -translate-y-1/2 h-0 w-4
@@ -1797,7 +1684,7 @@
         <div class="mx-auto max-w-7xl px-6 py-12 lg:py-20">
             <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-12">
                 <div class="order-1 lg:order-2 lg:col-span-3">
-                    <h3 data-text-key="QuikLinks" class="mb-4 font-semibold tracking-wide text-[20px]"></h3>
+                    <h3 class="mb-4 font-semibold tracking-wide text-[20px]">Quick Links</h3>
                     <ul class="space-y-3 text-white/90 text-[16px]">
                         <li>
                             <a href="careers.html" class="hover:text-white">Careers</a>
@@ -1820,7 +1707,7 @@
                     </ul>
                 </div>
                 <div class="order-2 lg:order-3 lg:col-span-3">
-                    <h3 data-text-key="ForStudents&Faculty" class="mb-4 font-semibold tracking-wide text-[20px]"></h3>
+                    <h3 class="mb-4 font-semibold tracking-wide text-[20px]">For Students and Faculty</h3>
                     <ul class="space-y-3 text-white/90 text-[16px]">
                         <li>
                             <a href="campus-facilities.html" class="hover:text-white">Facilities</a>
@@ -1844,7 +1731,7 @@
                     </ul>
                 </div>
                 <div class="order-3 lg:order-4 lg:col-span-3">
-                    <h3 data-text-key="ContactUs" class="mb-4 font-semibold tracking-wide text-[20px]"></h3>
+                    <h3 class="mb-4 font-semibold tracking-wide text-[20px]">Contact Us</h3>
                     <ul class="space-y-3 text-white/90  text-[14px]">
                         <li class="flex gap-3">
                             <svg class="mt-1 h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="currentColor">
@@ -1871,42 +1758,6 @@
                                 class="hover:text-white">information@lcic.edu.ph</a>
                         </li>
                     </ul>
-                    <!-- <div class="mt-8">
-                        <h4 data-text-key="Newsletter" class="mb-3 font-semibold tracking-wide text-[20px]">Newsletter
-                        </h4>
-                        <form id="newsletterForm" class="max-w-md">
-                            <div
-                                class="flex overflow-hidden rounded-md ring-1 ring-white/30 focus-within:ring-white/60">
-                                <input type="email" id="email" name="email" data-text-key="EmailAddress"
-                                    placeholder="Email Address"
-                                    class="w-0 grow bg-white/10 px-4 py-2 text-white placeholder-white/70 outline-none"
-                                    required>
-                                <button data-text-key="Register" type="submit"
-                                    class="bg-white px-4 py-2 text-sm font-semibold text-[#0055A6] hover:bg-sky-50">Register</button>
-                            </div>
-                        </form>
-                        <p id="message" class="mt-2 text-white"></p>
-                    </div> -->
-                    <!-- <div class="mt-8">
-                        <h4 class="mb-3 font-semibold tracking-wide text-[20px]">
-                            Newsletter
-                        </h4>
-
-                        <form action="https://gmail.us17.list-manage.com/subscribe/post?u=a9f0cf1ef7fa91887cb364719&amp;id=ae614dda64&amp;f_id=00b997e2f0" method="POST" target="_blank"
-                            class="max-w-md">
-                            <div
-                                class="flex overflow-hidden rounded-md ring-1 ring-white/30 focus-within:ring-white/60">
-
-                                <input type="email" name="EMAIL" placeholder="Email Address" required
-                                    class="w-0 grow bg-white/10 px-4 py-2 text-white placeholder-white/70 outline-none">
-
-                                <button type="submit"
-                                    class="bg-white px-4 py-2 text-sm font-semibold text-[#0055A6] hover:bg-sky-50">
-                                    Register
-                                </button>
-                            </div>
-                        </form>
-                    </div> -->
                 </div>
                 <div class="order-5 lg:order-1 lg:col-span-3">
                     <div class="flex items-start gap-4">
@@ -1914,7 +1765,7 @@
                             <img src="assets/img/brand-logo-white.webp" alt="FooterLogo">
                         </a>
                     </div>
-                    <p data-text-key="LCICDescription" class="text-[12px] mt-5"></p>
+                    <p class="text-[12px] mt-5">Providing international education in Cebu, Philippines. We cultivate global talent through diverse academic programs and produce individuals who contribute to the international community.</p>
                     <div class="mt-6 flex gap-3">
                         <a href="https://www.facebook.com/LapulapuCebuInternationalCollege" aria-label="Facebook"
                             class="grid h-10 w-10 place-items-center rounded-md bg-white/20 hover:bg-white/30">
@@ -1942,16 +1793,16 @@
             </div>
             <div class="mt-10 border-t border-white/10 pt-6">
                 <div class="flex flex-col-reverse items-start gap-4 lg:flex-row lg:items-center lg:justify-between">
-                    <p data-text-key="AllRightReserved" class="text-xs text-white/80"></p>
+                    <p class="text-xs text-white/80">©2026 Lapulapu-Cebu International College. All rights reserved.</p>
                     <ul class="flex flex-wrap gap-x-8 gap-y-2 text-sm text-white/80">
                         <li>
-                            <a data-text-key="PrivacyPolicy" href="privacy-policy.html" class="hover:text-white"></a>
+                            <a href="privacy-policy.html" class="hover:text-white">Privacy Policy</a>
                         </li>
                         <li>
-                            <a data-text-key="Sitemap" href="sitemap.html" class="hover:text-white"></a>
+                            <a href="sitemap.html" class="hover:text-white">Sitemap</a>
                         </li>
                         <li>
-                            <a data-text-key="Accessibility" href="accessibilty.html" class="hover:text-white"></a>
+                            <a href="accessibilty.html" class="hover:text-white">Accessibility</a>
                         </li>
                     </ul>
                 </div>
