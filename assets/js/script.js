@@ -145,7 +145,7 @@ jQuery(document).ready(function ($) {
     const isBlueLogo = document.body.dataset.blueLogo === 'true';
     const search = document.getElementById('headerSearch');
 
-    const logoBlue = lang === 'en' ? asset('assets/img/brand-logo.webp') : asset('assets/img/logo-blue.webp');
+    const logoBlue = lang === 'en' ? asset('assets/img/brand-logo.webp') : asset('assets/img/brand-logo.webp');
     const logoWhite = lang === 'en' ? asset('assets/img/brand-logo-white.webp') : asset('assets/img/brand-logo-white.webp');
 
     if (isBlueLogo) {
