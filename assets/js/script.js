@@ -149,32 +149,27 @@ jQuery(document).ready(function ($) {
     const logoWhite = lang === 'en' ? asset('assets/img/brand-logo-white.webp') : asset('assets/img/brand-logo-white.webp');
 
     if (isBlueLogo) {
-      if (window.scrollY > 10) {
-        header.classList.add('bg-white', 'shadow-md');
-        header.classList.remove('bg-transparent');
-        navLinks.forEach((link) => {
-          link.classList.remove('text-[#fff]');
-          link.classList.add('text-[#111111]');
-        });
-        if (logo) logo.src = logoBlue;
-      } else {
-        header.classList.remove('bg-white', 'shadow-md');
-        header.classList.add('bg-transparent');
-        navLinks.forEach((link) => {
-          link.classList.remove('text-[#111111]');
-          link.classList.add('text-[#fff]');
-        });
-        if (logo) logo.src = logoWhite;
-      }
+
+      header.classList.add('bg-white', 'shadow-md');
+      header.classList.remove('bg-transparent');
+
       navLinks.forEach((link) => {
         link.classList.remove('text-[#fff]');
         link.classList.add('text-[#111111]');
       });
+
       if (logo) logo.src = logoBlue;
+
       if (search) {
-        search.classList.remove('bg-white', 'rounded-full');
-        search.classList.add('border', 'border-solid', 'border-[#BAD8F6]', 'rounded-full');
+        search.classList.remove('bg-white');
+        search.classList.add(
+          'border',
+          'border-solid',
+          'border-[#BAD8F6]',
+          'rounded-full'
+        );
       }
+
       return;
     }
 
@@ -219,6 +214,10 @@ jQuery(document).ready(function ($) {
     if (mobileLogo) mobileLogo.src = whiteLogo;
     if (mobileLanguageLogo) mobileLanguageLogo.src = whiteLogo;
   };
+
+  $(document).ready(function () {
+    updateHeaderOnScroll();
+  });
 
   window.addEventListener('load', updateHeaderOnScroll);
   window.addEventListener('scroll', updateHeaderOnScroll);
